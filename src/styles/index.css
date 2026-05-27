@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-dark: #000d12;
+  --color-brand-light: #e9f4f9;
+  --color-brand-muted: #586e84;
+  --color-primary-cyan: #00B4FD;
+  --color-primary-blue: #003ACE;
+
+  --font-heading: 'Archivo', sans-serif;
+  --font-mono: 'Chivo_Mono_Medium', 'Chivo Mono', monospace;
+  --font-sans: 'Gilroy', 'Inter', 'Roboto', sans-serif;
+
+  --animate-marquee: marquee 15s linear infinite;
+
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-brand-dark text-brand-light font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .mask-star {
+    mask-image: url('data:image/svg+xml;utf8,<svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M29 0L36 22L58 29L36 36L29 58L22 36L0 29L22 22L29 0Z" fill="black"/></svg>');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: #000D12;
+    opacity: 0.3;
+  }
+  
+  .bg-gradient-btn {
+    background-image: linear-gradient(141.821deg, rgb(0, 180, 253) 5.6799%, rgb(0, 58, 206) 86.975%);
+  }
+
+  .text-gradient-cyan-blue {
+    background-image: linear-gradient(114.117deg, rgb(0, 180, 253) 79.763%, rgb(0, 58, 206) 91.369%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
