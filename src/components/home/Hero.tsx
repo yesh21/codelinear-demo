@@ -5,9 +5,9 @@ import imgRectangle11 from "../../assets/images/8bd31b71a379644a52221930303daba4
 
 export function Hero() {
   return (
-    <div className="bg-[#000d12] h-[811px] overflow-clip relative shrink-0 w-[1440px]">
+    <div className="relative mx-auto flex w-full max-w-[1440px] flex-col items-center overflow-x-hidden bg-[#000d12] px-4 py-12 lg:block lg:h-[811px] lg:px-0 lg:py-0">
       {/* Background glow */}
-      <div className="absolute left-[calc(58.33%+33.13px)] size-[398.873px] top-[204.52px]">
+      <div className="absolute left-[calc(58.33%+33.13px)] z-0 size-[398.873px] top-[204.52px]">
         <div className="absolute inset-[-25.07%]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 598.873 598.873">
             <g filter="url(#filter0_f_1_1621)" opacity="0.5">
@@ -29,110 +29,31 @@ export function Hero() {
       </div>
 
       {/* Hero text + CTA */}
-      <div className="absolute flex flex-col gap-[52px] items-start left-[80px] top-[211.96px]">
+      <div className="relative z-20 flex flex-col gap-8 items-start text-center lg:absolute lg:left-[80px] lg:top-[211.96px] lg:text-left">
         <div className="flex flex-col gap-[16px] items-start text-[#e9f4f9]">
-          <p className="font-['Archivo:Medium',sans-serif] font-medium leading-[1.2] text-[67px] tracking-[-0.67px] w-[607.835px]" style={{ fontVariationSettings: "'wdth' 100" }}>
+          <p className="font-['Archivo:Medium',sans-serif] font-medium leading-[1.15] text-[40px] tracking-[-0.4px] w-full max-w-[607.835px] sm:text-[52px] lg:text-[67px]" style={{ fontVariationSettings: "'wdth' 100" }}>
             The new foundation of modern banking
           </p>
-          <p className="font-['Archivo:Regular',sans-serif] font-normal leading-[1.3] opacity-80 text-[16px] w-[356.169px]" style={{ fontVariationSettings: "'wdth' 100" }}>
+          <p className="font-['Archivo:Regular',sans-serif] mx-auto lg:mx-0 font-normal leading-[1.3] opacity-80 text-[15px] w-full max-w-[356.169px]" style={{ fontVariationSettings: "'wdth' 100" }}>
             We drive innovation and growth, provide seamless customer experience and operational excellence
           </p>
         </div>
-        <div className="flex gap-[20px] items-start">
+        <div className="flex flex-col gap-3 items-stretch mx-auto lg:mx-0 sm:flex-row sm:items-start">
           <Button variant="default">REQUEST DEMO</Button>
           <Button variant="outline">Contact Us</Button>
         </div>
       </div>
 
-      {/* Trusted by logos */}
-      <div className="absolute flex flex-col gap-[16px] items-start left-[80px] top-[655.06px]">
-        <p className="capitalize font-['Archivo:Medium',sans-serif] font-medium leading-[1.3] opacity-70 text-[#e9f4f9] text-[16px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
-          trusted by:
-        </p>
-        <div className="flex gap-[18.398px] items-center opacity-90">
-          {/* SHELLS */}
-          <div className="flex gap-[4.599px] items-center">
-            <div className="h-[18.398px] w-[17.478px] relative">
-              <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 17.478 18.3979">
-                <path clipRule="evenodd" d={svgPaths.p1713f6f0} fill="#586E84" fillRule="evenodd" />
-              </svg>
-            </div>
-            <p className="font-['Roboto:Bold',sans-serif] font-bold text-[#586e84] text-[13.8px] leading-[1.1]">SHELLS</p>
-          </div>
-
-          {/* SmartFinder */}
-          <div className="flex gap-[4.599px] items-center">
-            <div className="h-[18.398px] w-[19.064px] relative">
-              <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 19.0639 18.3979">
-                <path d={svgPaths.p1a05e700} fill="#586E84" />
-                <path d={svgPaths.p34c66200} fill="#586E84" />
-                <path d={svgPaths.p398afb00} fill="white" />
-              </svg>
-            </div>
-            <p className="font-['Roboto:Bold',sans-serif] font-bold text-[#586e84] text-[13.8px] leading-[1.1]">SmartFinder</p>
-          </div>
-
-          {/* Zoomerr */}
-          <div className="flex gap-[4.599px] items-center">
-            <div className="relative size-[18.398px]">
-              <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 18.3979 18.3979">
-                <path clipRule="evenodd" d={svgPaths.p1bfec400} fill="#586E84" fillRule="evenodd" />
-              </svg>
-            </div>
-            <p className="font-['Roboto:Bold',sans-serif] font-bold text-[#586e84] text-[13.8px] leading-[1.1]">Zoomerr</p>
-          </div>
-
-          {/* ArtVenue */}
-          <div className="flex gap-[4.599px] items-center">
-            <div className="h-[18.398px] w-[32.087px] relative">
-              <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 32.0868 18.3979">
-                <path d={svgPaths.p27c1900} fill="#586E84" />
-                <path d={svgPaths.p28b68c00} fill="#586E84" />
-                <path d={svgPaths.p3eef0180} fill="#586E84" />
-              </svg>
-            </div>
-            <p className="font-['Roboto:Bold',sans-serif] font-bold text-[#586e84] text-[13.8px]">
-              <span className="leading-[1.1]">Art</span>
-              <span className="leading-[1.1]">Venue</span>
-            </p>
-          </div>
-
-          {/* kontrastr */}
-          <div className="flex gap-[4.599px] items-center">
-            <div className="h-[16.788px] w-[13.655px] relative">
-              <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13.6547 16.788">
-                <path d={svgPaths.p1f3e6980} fill="#586E84" />
-                <path d={svgPaths.p28c79ab1} fill="#586E84" />
-              </svg>
-            </div>
-            <p className="font-['Roboto:Bold',sans-serif] font-bold text-[#586e84] text-[13.8px] leading-[1.1]">kontrastr</p>
-          </div>
-
-          {/* WAVES MARATHON */}
-          <div className="flex gap-[4.599px] items-center">
-            <div className="h-[18.398px] w-[12.09px] relative">
-              <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.0897 18.3979">
-                <path d={svgPaths.p3b72aa00} fill="#586E84" />
-              </svg>
-            </div>
-            <p className="font-['Roboto:Medium',sans-serif] font-medium text-[#586e84] tracking-[0.5px] text-[18px]">
-              <span className="font-['Roboto:Bold',sans-serif] font-bold leading-[1.1]">WAVES</span>
-              <span className="font-['Roboto:Regular',sans-serif] font-normal leading-[1.4]">MARATHON</span>
-            </p>
-          </div>
-        </div>
-      </div>
-
       {/* Right side phone mockup area */}
-      <div className="-translate-y-1/2 absolute h-[301px] left-[calc(58.33%-22px)] top-1/2 w-[562px]">
+      <div className="relative z-10 mt-10 h-[301px] w-[562px] origin-top scale-[0.58] sm:scale-[0.75] md:scale-90 lg:absolute lg:left-[calc(58.33%-22px)] lg:top-1/2 lg:mt-0 lg:w-[562px] lg:-translate-y-1/2 lg:scale-100">
 
         {/* Person photo */}
-        <div className="absolute h-[300.706px] left-[87.13px] rounded-[31px] top-[0.25px] w-[362.638px] overflow-hidden">
-          <img alt="" className="absolute h-[100.04%] left-[-24.37%] max-w-none top-[-0.02%] w-[124.37%]" src={imgPexelsPhotoByAndreaPiacquadio} />
+        <div className="absolute z-0 h-[300.706px] left-[87.13px] rounded-[31px] top-[0.25px] w-[362.638px] overflow-hidden">
+          <img alt="" className="absolute z-10 h-[100.04%] left-[-24.37%] max-w-none top-[-0.02%] w-[124.37%]" src={imgPexelsPhotoByAndreaPiacquadio} />
         </div>
 
         {/* Main banking card — the larger frosted panel on right */}
-        <div className="-translate-y-1/2 absolute backdrop-blur-[6px] bg-[rgba(255,255,255,0.4)] h-[177px] left-[353px] overflow-clip rounded-[12px] shadow-[0px_0px_27.571px_8.92px_rgba(0,0,0,0.25)] top-[calc(50%-39px)] w-[208px]">
+        <div className="-translate-y-1/2 absolute z-20 backdrop-blur-[6px] bg-[rgba(255,255,255,0.4)] h-[177px] left-[353px] overflow-clip rounded-[12px] shadow-[0px_0px_27.571px_8.92px_rgba(0,0,0,0.25)] top-[calc(50%-39px)] w-[208px]">
 
           {/* Inner white card */}
           <div className="-translate-y-1/2 absolute bg-[rgba(255,255,255,0.7)] h-[168px] left-[5px] overflow-clip rounded-[11px] top-1/2 w-[199px]">
@@ -354,7 +275,7 @@ export function Hero() {
         </div>
 
         {/* Left floating activity card */}
-        <div className="absolute backdrop-blur-[8.096px] bg-[rgba(255,255,255,0.4)] h-[117px] left-[-28px] overflow-clip rounded-[12px] top-[150px] w-[254px]">
+        <div className="absolute z-20 backdrop-blur-[8.096px] bg-[rgba(255,255,255,0.4)] h-[117px] left-[-28px] overflow-clip rounded-[12px] top-[150px] w-[254px]">
           <div className="-translate-y-1/2 absolute bg-[rgba(255,255,255,0.7)] h-[109px] left-[4px] overflow-clip rounded-[11px] top-1/2 w-[246px]">
             <div className="-translate-x-1/2 absolute h-[204.533px] left-1/2 top-[10px] w-[232.94px]">
               <p className="absolute font-['Gilroy-Bold:☞',sans-serif] leading-[17.676px] left-0 text-[#0f0f0f] text-[12.625px] top-0 whitespace-nowrap">Recent activity</p>
@@ -548,6 +469,85 @@ export function Hero() {
           <p className="absolute font-['Gilroy-Bold:☞',sans-serif] leading-[16.462px] right-[calc(16.67%-32.23px)] text-[#0b0b0b] text-[10.975px] text-right top-[257.62px] whitespace-nowrap">+$859</p>
         </div>
       </div>
+      {/* Trusted by logos */}
+      <div className="relative z-10 flex flex-col gap-4 items-start pt-6 text-center lg:absolute lg:left-[80px] lg:top-[655.06px] lg:pt-0 lg:text-left">
+        <p className="capitalize font-['Archivo:Medium',sans-serif] font-medium leading-[1.3] opacity-70 text-[#e9f4f9] text-[16px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
+          trusted by:
+        </p>
+        <div className="flex flex-wrap justify-center gap-[18.398px] items-center opacity-90">
+          {/* SHELLS */}
+          <div className="flex gap-[4.599px] items-center">
+            <div className="h-[18.398px] w-[17.478px] relative">
+              <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 17.478 18.3979">
+                <path clipRule="evenodd" d={svgPaths.p1713f6f0} fill="#586E84" fillRule="evenodd" />
+              </svg>
+            </div>
+            <p className="font-['Roboto:Bold',sans-serif] font-bold text-[#586e84] text-[13.8px] leading-[1.1]">SHELLS</p>
+          </div>
+
+          {/* SmartFinder */}
+          <div className="flex gap-[4.599px] items-center">
+            <div className="h-[18.398px] w-[19.064px] relative">
+              <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 19.0639 18.3979">
+                <path d={svgPaths.p1a05e700} fill="#586E84" />
+                <path d={svgPaths.p34c66200} fill="#586E84" />
+                <path d={svgPaths.p398afb00} fill="white" />
+              </svg>
+            </div>
+            <p className="font-['Roboto:Bold',sans-serif] font-bold text-[#586e84] text-[13.8px] leading-[1.1]">SmartFinder</p>
+          </div>
+
+          {/* Zoomerr */}
+          <div className="flex gap-[4.599px] items-center">
+            <div className="relative size-[18.398px]">
+              <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 18.3979 18.3979">
+                <path clipRule="evenodd" d={svgPaths.p1bfec400} fill="#586E84" fillRule="evenodd" />
+              </svg>
+            </div>
+            <p className="font-['Roboto:Bold',sans-serif] font-bold text-[#586e84] text-[13.8px] leading-[1.1]">Zoomerr</p>
+          </div>
+
+          {/* ArtVenue */}
+          <div className="flex gap-[4.599px] items-center">
+            <div className="h-[18.398px] w-[32.087px] relative">
+              <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 32.0868 18.3979">
+                <path d={svgPaths.p27c1900} fill="#586E84" />
+                <path d={svgPaths.p28b68c00} fill="#586E84" />
+                <path d={svgPaths.p3eef0180} fill="#586E84" />
+              </svg>
+            </div>
+            <p className="font-['Roboto:Bold',sans-serif] font-bold text-[#586e84] text-[13.8px]">
+              <span className="leading-[1.1]">Art</span>
+              <span className="leading-[1.1]">Venue</span>
+            </p>
+          </div>
+
+          {/* kontrastr */}
+          <div className="flex gap-[4.599px] items-center">
+            <div className="h-[16.788px] w-[13.655px] relative">
+              <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13.6547 16.788">
+                <path d={svgPaths.p1f3e6980} fill="#586E84" />
+                <path d={svgPaths.p28c79ab1} fill="#586E84" />
+              </svg>
+            </div>
+            <p className="font-['Roboto:Bold',sans-serif] font-bold text-[#586e84] text-[13.8px] leading-[1.1]">kontrastr</p>
+          </div>
+
+          {/* WAVES MARATHON */}
+          <div className="flex gap-[4.599px] items-center">
+            <div className="h-[18.398px] w-[12.09px] relative">
+              <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.0897 18.3979">
+                <path d={svgPaths.p3b72aa00} fill="#586E84" />
+              </svg>
+            </div>
+            <p className="font-['Roboto:Medium',sans-serif] font-medium text-[#586e84] tracking-[0.5px] text-[18px]">
+              <span className="font-['Roboto:Bold',sans-serif] font-bold leading-[1.1]">WAVES</span>
+              <span className="font-['Roboto:Regular',sans-serif] font-normal leading-[1.4]">MARATHON</span>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
+
   );
 }

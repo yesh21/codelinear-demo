@@ -8,7 +8,7 @@ function App() {
       <Navbar />
 
       <main className="min-h-screen bg-brand-dark text-brand-light flex flex-col items-center overflow-x-hidden">
-        <div className="w-[1440px] shrink-0 relative flex flex-col items-start">
+        <div className="w-full shrink-0 relative flex flex-col items-start">
           <Home />
           <Footer />
         </div>
