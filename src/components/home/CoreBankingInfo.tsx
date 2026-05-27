@@ -9,7 +9,26 @@ import { TextLink } from "../ui/TextLink";
 export function CoreBankingInfo() {
   return (
     <div className="bg-[#000d12] h-[619px] overflow-clip relative shrink-0 w-[1440px]">
-      <p className="[word-break:break-word] absolute font-['Archivo:Medium',sans-serif] font-medium leading-[1.2] left-[-163.31px] opacity-50 text-[572.632px] text-[transparent] top-[-2.25px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
+      <p
+        className="
+    absolute
+    font-['Archivo:Medium',sans-serif]
+    font-medium
+    leading-[1.2]
+    left-[-163.31px]
+    top-[-2.25px]
+    whitespace-nowrap
+    opacity-50
+    text-[572.632px]
+    text-transparent
+    pointer-events-none
+    select-none
+  "
+        style={{
+          WebkitTextStroke: "2px rgba(0, 90, 130, 0.42)",
+          fontVariationSettings: "'wdth' 100",
+        }}
+      >
         CB7
       </p>
       <div className="absolute h-[461.422px] left-[calc(66.67%-33px)] top-[80.17px] w-[651.666px]">

@@ -10,7 +10,11 @@ import { TextLink } from "../ui/TextLink";
 export function DigitalBanking() {
   return (
     <div className="bg-[#e9f4f9] h-[2647px] overflow-clip relative shrink-0 w-[1440px]">
-      <p className="[word-break:break-word] absolute font-['Archivo:Medium',sans-serif] font-medium leading-[1.2] left-[calc(16.67%+37px)] opacity-50 text-[572.632px] text-[transparent] top-[-66.74px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
+      <p className="[word-break:break-word] absolute font-['Archivo:Medium',sans-serif] font-medium leading-[1.2] left-[calc(16.67%+37px)] opacity-50 text-[572.632px] text-[transparent] top-[-66.74px] whitespace-nowrap" style={{
+        WebkitTextStroke: "2px rgba(0, 90, 130, 0.42)",
+        fontVariationSettings: "'wdth' 100",
+      }}
+      >
         N7
       </p>
       <div className="absolute left-[-364.23px] size-[778.743px] top-[1928.56px]">
@@ -371,7 +375,10 @@ export function DigitalBanking() {
         </div>
       </div>
       <div className="absolute h-[427px] left-[81px] overflow-clip rounded-[27px] top-[2104.43px] w-[1279px]" style={{ backgroundImage: "linear-gradient(115.899deg, rgb(3, 30, 42) 12.22%, rgb(0, 13, 18) 59.256%)" }}>
-        <p className="[word-break:break-word] absolute font-['Archivo:Medium',sans-serif] font-medium leading-[1.2] left-[620.56px] opacity-50 text-[572.632px] text-[transparent] top-[-160.72px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
+        <p className="[word-break:break-word] absolute font-['Archivo:Medium',sans-serif] font-medium leading-[1.2] left-[620.56px] opacity-50 text-[572.632px] text-[transparent] top-[-160.72px] whitespace-nowrap" style={{
+          WebkitTextStroke: "2px rgba(0, 90, 130, 0.42)",
+          fontVariationSettings: "'wdth' 100",
+        }}>
           N7
         </p>
         <div className="-translate-y-1/2 [word-break:break-word] absolute content-stretch flex flex-col font-['Archivo:Regular',sans-serif] font-normal gap-[32px] items-start left-[65px] text-[#e9f4f9] top-[calc(50%-0.22px)]">
