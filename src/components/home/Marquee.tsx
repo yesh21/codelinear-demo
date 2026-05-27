@@ -5,7 +5,6 @@ export function Marquee() {
   return (
     <div className="bg-white h-[116px] overflow-hidden relative shrink-0 w-full flex items-center">
       <div className="flex w-fit animate-marquee whitespace-nowrap">
-        {/* Marquee Group 1 */}
         <div className="flex gap-[24px] items-center mx-[12px] shrink-0">
           <div className="h-[58px] relative shrink-0 w-[58.002px]" data-name="Vector">
             <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 58.0023 58">
