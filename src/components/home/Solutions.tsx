@@ -55,7 +55,7 @@ const SOLUTIONS_CONFIG = {
       description:
         "N7 brings full capabilities across strategy, human-centred design, operations, engineering and data science to create and deliver disruptive innovation. Our approach to building digital banks is specifically designed to help clients ",
       icon: svgPaths.p3b3d7a80,
-      gradientId: "solution-gradient-2",
+      gradientId: "solution-gradient-4",
       gradient: {
         x1: "9.0592",
         x2: "50.868",

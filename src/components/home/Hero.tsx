@@ -45,7 +45,7 @@ export function Hero() {
       </div>
 
       {/* Right side phone mockup area */}
-      <div className="relative z-10 mt-10 h-[301px] w-[562px] origin-top scale-[0.58] sm:scale-[0.75] md:scale-90 lg:absolute lg:left-[calc(58.33%-22px)] lg:top-1/2 lg:mt-0 lg:w-[562px] lg:-translate-y-1/2 lg:scale-100">
+      <div className="relative z-10 mt-10 h-[301px] w-[562px] origin-top scale-[0.68] sm:scale-[0.85] md:scale-90 lg:absolute lg:left-[calc(58.33%-22px)] lg:top-1/2 lg:mt-0 lg:w-[562px] lg:-translate-y-1/2 lg:scale-100">
 
         {/* Person photo */}
         <div className="absolute z-0 h-[300.706px] left-[87.13px] rounded-[31px] top-[0.25px] w-[362.638px] overflow-hidden">
