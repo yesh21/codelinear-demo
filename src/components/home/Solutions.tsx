@@ -163,10 +163,6 @@ function SolutionCard({
   );
 }
 
-/* =========================================
-   COMPONENT
-========================================= */
-
 export function Solutions() {
   return (
     <section className="relative w-full overflow-hidden bg-[#000d12]">

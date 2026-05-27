@@ -2,17 +2,89 @@ import { Button } from "../ui/Button";
 
 export function PaperlessPromo() {
   return (
-    <div className="bg-[#000d12] h-[316px] overflow-clip relative shrink-0 w-[1440px]">
-      <div className="-translate-y-1/2 [word-break:break-word] absolute content-stretch flex flex-col font-['Archivo:Regular',sans-serif] font-normal gap-[32px] items-start left-[80px] text-[#e9f4f9] top-1/2">
-        <p className="leading-[1.2] relative shrink-0 text-[53px] tracking-[-0.53px] w-[607.835px]" style={{ fontVariationSettings: "'wdth' 100" }}>
-          Take the full advantage of going paper-less now.
-        </p>
-        <p className="leading-[1.3] opacity-70 relative shrink-0 text-[16px] w-[462.919px]" style={{ fontVariationSettings: "'wdth' 100" }}>{`CB7 helps your financial institution improve the client experience, automate and optimize procedures, simplify banking operations `}</p>
+    <section className="w-full px-4 py-10 sm:px-6 md:px-10 lg:px-16 xl:px-20">
+      {/* Content */}
+      <div
+        className="
+            relative
+            z-10
+            flex
+            flex-col
+            lg:flex-row
+            lg:items-center
+            lg:justify-between
+            gap-10
+            h-full
+          "
+      >
+        {/* Left Content */}
+        <div className="max-w-[620px] mx-auto">
+          <h2
+            className="
+                font-['Archivo:Regular',sans-serif]
+                text-[#e9f4f9]
+                leading-[1.15]
+                tracking-[-0.02em]
+                text-[32px]
+                sm:text-[40px]
+                md:text-[46px]
+                lg:text-[53px]
+              "
+            style={{
+              fontVariationSettings: "'wdth' 100",
+            }}
+          >
+            Take the full advantage of going paper-less now.
+          </h2>
+
+          <p
+            className="
+                mt-6
+                text-[#e9f4f9]
+                opacity-80
+                leading-[1.6]
+                text-[15px]
+                md:text-[16px]
+                max-w-[470px]
+              "
+            style={{
+              fontVariationSettings: "'wdth' 100",
+            }}
+          >
+            CB7 helps your financial institution improve the client
+            experience, automate and optimize procedures, simplify banking
+            operations
+          </p>
+        </div>
+
+        {/* Buttons */}
+        <div
+          className="
+              relative
+              z-10
+              flex
+              flex-col
+              sm:flex-row
+              gap-4
+              mx-auto
+              lg:w-auto
+            "
+        >
+          <Button
+            variant="outline"
+            className="w-full sm:w-auto"
+          >
+            Contact Us
+          </Button>
+
+          <Button
+            variant="default"
+            className="w-full sm:w-auto"
+          >
+            REQUEST DEMO
+          </Button>
+        </div>
       </div>
-      <div className="-translate-y-1/2 absolute content-stretch flex gap-[40px] items-center justify-end right-[80px] top-1/2">
-        <Button variant="outline">Contact Us</Button>
-        <Button variant="default">REQUEST DEMO</Button>
-      </div>
-    </div>
+    </section>
   );
 }
