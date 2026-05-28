@@ -156,7 +156,11 @@ export function CoreBankingInfo() {
         >
           <ContentSection />
         </div>
-        <div className="w-full xl:w-[45%]">
+        <div className="      flex
+      w-full
+      justify-center
+      xl:w-[45%]
+      xl:justify-end">
           <BankingPreview />
         </div>
       </div>

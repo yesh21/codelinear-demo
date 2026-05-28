@@ -1,4 +1,6 @@
 import svgPaths from "../../assets/svgs/svg-54ycx9j4u6";
+import { Button } from "../ui/Button";
+import { TextLink } from "../ui/TextLink";
 
 export function Insights() {
   return (
@@ -9,7 +11,7 @@ export function Insights() {
       <div className="relative mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-20">
         <div className="grid gap-16 lg:grid-cols-[0.9fr_1.1fr]">
           {/* LEFT SIDE */}
-          <div className="flex flex-col items-start gap-12">
+          <div className="flex flex-col items-center lg:items-start gap-12">
             <h2
               className="max-w-[460px] text-4xl leading-[1.2] tracking-[-0.03em] text-[#e9f4f9] md:text-5xl"
               style={{ fontVariationSettings: "'wdth' 100" }}
@@ -18,9 +20,7 @@ export function Insights() {
               fintech
             </h2>
 
-            <button className="rounded-[10px] border border-[#e9f4f9] px-[59px] py-[15px] font-['Chivo_Mono_Medium'] text-[15px] uppercase text-[#e9f4f9] transition hover:bg-white hover:text-black">
-              Insights
-            </button>
+            <Button variant="outline">Insights</Button>
           </div>
 
           {/* RIGHT SIDE */}
@@ -132,13 +132,7 @@ export function Insights() {
 
             {/* FOOTER LINK */}
             <div className="flex justify-end">
-              <button className="group flex items-center gap-2 font-['Chivo_Mono_Medium'] text-sm uppercase text-[#00B4FD]">
-                Read All Insights
-
-                <span className="transition-transform group-hover:translate-x-1">
-                  →
-                </span>
-              </button>
+              <TextLink textLabel="read all insights"></TextLink>
             </div>
           </div>
         </div>

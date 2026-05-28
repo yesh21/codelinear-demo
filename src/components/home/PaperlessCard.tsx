@@ -69,8 +69,12 @@ export function PaperlessCard() {
             lg:flex-row
             lg:items-center
             lg:justify-between
+            justify-center
             gap-10
             h-full
+            min-h-[520px]
+          md:min-h-[420px]
+
           "
         >
           {/* Left Content */}

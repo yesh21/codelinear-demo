@@ -2,13 +2,14 @@ import svgPaths from "../../assets/svgs/svg-54ycx9j4u6";
 
 type TextLinkProps = {
   className?: string;
+  textLabel?: string
 };
 
-function TextLink({ className }: TextLinkProps) {
+function TextLink({ className, textLabel = "learn more" }: TextLinkProps) {
   return (
     <div className={className || "content-stretch flex flex-col gap-[3px] items-start relative"}>
       <div className="content-stretch flex gap-[5px] items-center justify-center relative shrink-0">
-        <p className="[word-break:break-word] font-['Chivo_Mono_Medium:Regular',sans-serif] leading-[1.3] not-italic relative shrink-0 text-[#00b4fd] text-[14px] text-right uppercase whitespace-nowrap">learn more</p>
+        <p className="[word-break:break-word] font-['Chivo_Mono_Medium:Regular',sans-serif] leading-[1.3] not-italic relative shrink-0 text-[#00b4fd] text-[14px] text-right uppercase whitespace-nowrap">{textLabel}</p>
         <div className="flex items-center justify-center relative shrink-0">
           <div className="flex-none rotate-180">
             <div className="h-[14.505px] overflow-clip relative w-[13.569px]" data-name="3">
