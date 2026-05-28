@@ -1,30 +1,28 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
+import svgPaths from '../../assets/svgs/svg-54ycx9j4u6';
 
-// ── Brand pattern ─────────────────────────────────────────────────────────────
 function BrandPattern({ color = '#00B4FD' }) {
-  const X = ({ tx = 0, ty = 0 }) => (
-    <g transform={`translate(${tx},${ty})`}>
-      <path
-        d="M4 4 Q36 4 36 36 Q36 4 68 4 L68 68 Q36 68 36 36 Q36 68 4 68 Z"
-        fill={color}
-      />
-      <circle cx="36" cy="36" r="21" fill="#07193c" />
-    </g>
-  );
   return (
-    <svg
-      viewBox="0 0 160 160"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      style={{ width: '74%', height: '74%' }}
-    >
-      <X tx={0} ty={0} />
-      <X tx={84} ty={0} />
-      <X tx={0} ty={84} />
-      <X tx={84} ty={84} />
-    </svg>
+    <div className="relative flex h-[267px] w-[295px] items-center justify-center overflow-hidden rounded-[8px] bg-[#07193c]">
+      <div className="relative h-[218.18px] w-[257.198px]">
+        <svg
+          className="absolute inset-0 h-full w-full"
+          fill="none"
+          preserveAspectRatio="none"
+          viewBox="0 0 257.198 218.18"
+        >
+          <g id="Frame 55">
+            <path d={svgPaths.p24c12780} fill={color} id="Vector" />
+            <path d={svgPaths.p3f579070} fill={color} id="Vector_2" />
+            <path d={svgPaths.p6cf0600} fill={color} id="Vector_3" />
+            <path d={svgPaths.p28b12280} fill={color} id="Vector_4" />
+          </g>
+        </svg>
+      </div>
+    </div>
   );
 }
+
 
 // ── Nav button ────────────────────────────────────────────────────────────────
 function NavBtn({ direction, onClick }) {
@@ -71,12 +69,12 @@ function NavBtn({ direction, onClick }) {
             strokeLinejoin="round"
           />
         </svg>
+        
       )}
     </button>
   );
 }
 
-// ── Dots ──────────────────────────────────────────────────────────────────────
 function Dots({ total, current, onDotClick }) {
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
@@ -432,7 +430,6 @@ export function CaseStudies() {
           className="cs-stage"
           style={{ height: stageHeight ? stageHeight : undefined }}
         >
-          {/* Hidden sizer: renders active card in normal flow to define stage height */}
           <div className="cs-sizer" aria-hidden="true" ref={activeCardRef}>
             <SlideCard slide={slides[current]} />
           </div>
@@ -474,9 +471,7 @@ export function CaseStudies() {
           })}
         </div>
 
-        {/* Controls — always below the stage, never overlapping */}
         <div className="cs-controls">
-          {/* Desktop: prev/dots/next inline with absolute view-all */}
           <div className="cs-nav-row" style={{ display: 'contents' }}>
             <NavBtn direction="left" onClick={() => goTo(current - 1)} />
             <Dots total={n} current={current} onDotClick={goTo} />
@@ -487,7 +482,6 @@ export function CaseStudies() {
             <ViewAll />
           </div>
 
-          {/* Mobile: view all as its own row */}
           <div className="cs-view-all-inline">
             <ViewAll />
           </div>
@@ -497,7 +491,6 @@ export function CaseStudies() {
   );
 }
 
-// ── Extracted card markup (used by both sizer and real cards) ─────────────────
 function SlideCard({ slide }) {
   return (
     <div className="cs-card">

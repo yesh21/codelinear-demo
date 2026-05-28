@@ -22,12 +22,8 @@ export function Insights() {
             <Button variant="outline">Insights</Button>
           </div>
 
-          {/* RIGHT SIDE */}
           <div className="flex flex-col gap-[29px]">
-            {/* TOP FEATURE CARD */}
             <div className="grid min-h-[318px] overflow-hidden rounded-[18px] bg-[#01141b] md:grid-cols-[295px_1fr]">
-              {/* LEFT IMAGE */}
-              {/* LEFT IMAGE */}
               <div className="flex items-center justify-center p-6">
                 <div className="relative flex h-[267px] w-[295px] items-center justify-center overflow-hidden rounded-[8px] bg-[#07193c]">
                   <div className="relative h-[218.18px] w-[257.198px]">
@@ -68,7 +64,7 @@ export function Insights() {
               </div>
               <div className="flex flex-col justify-between px-4 py-6">
                 <div className="space-y-[11px]">
-                  <p className="font-['Chivo_Mono_Medium'] text-[12px] uppercase text-[#2490bb] opacity-80">
+                  <p className="font-['Chivo_Mono',_monospace] text-[12px] uppercase text-[#2490bb] tracking-wider opacity-80">
                     Getting Started
                   </p>
 
@@ -98,7 +94,7 @@ export function Insights() {
                   className="relative min-h-[318px] overflow-hidden rounded-[18px] bg-[#01141b] px-4 py-6"
                 >
                   <div className="flex flex-col gap-[11px]">
-                    <p className="font-['Chivo_Mono_Medium'] text-[12px] uppercase text-[#2490bb] opacity-80">
+                  <p className="font-['Chivo_Mono',_monospace] text-[12px] uppercase text-[#2490bb] tracking-wider opacity-80">
                       Getting Started
                     </p>
 

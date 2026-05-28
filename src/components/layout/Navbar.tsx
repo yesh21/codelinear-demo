@@ -6,7 +6,6 @@ export function Navbar() {
 
   return (
     <>
-      {/* Desktop Navbar */}
       <div className="hidden md:flex sticky z-50 backdrop-blur-[7.5px] bg-[rgba(47,47,47,0.7)] m-auto w-[75%] content-stretch justify-between items-center overflow-clip px-[10px] py-[9px] rounded-[12px] top-[31px]">
         <p
           className="[word-break:break-word] font-['Archivo:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#e9f4f9] text-[24px] whitespace-nowrap"
@@ -102,8 +101,7 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Navbar */}
-      <div className="md:hidden sticky z-50 backdrop-blur-[7.5px] bg-[rgba(47,47,47,0.7)] w-[97%] mx-auto content-stretch flex justify-between items-center px-4 py-3 top-3">
+      <div className="md:hidden sticky z-50 backdrop-blur-[7.5px] bg-[rgba(47,47,47,0.7)] w-[97%] mx-auto content-stretch flex justify-between items-center px-4 py-3 top-3 rounded-lg">
         <p
           className="[word-break:break-word] font-['Archivo:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#e9f4f9] text-[20px] whitespace-nowrap"
           style={{ fontVariationSettings: "'wdth' 100" }}
@@ -128,9 +126,18 @@ export function Navbar() {
               fill="none"
               xmlns="http://w3.org"
             >
-              <rect x="15" y="20" width="40" height="6" rx="3" fill="white" />
-              <rect x="15" y="34" width="50" height="6" rx="3" fill="white" />
-              <rect x="35" y="48" width="30" height="6" rx="3" fill="white" />
+              {mobileMenuOpen ? (
+                <>
+                  <line x1="20" y1="20" x2="50" y2="50" stroke="white" strokeWidth="6" strokeLinecap="round" />
+                  <line x1="50" y1="20" x2="20" y2="50" stroke="white" strokeWidth="6" strokeLinecap="round" />
+                </>
+              ) : (
+                              <>
+                  <rect x="15" y="20" width="40" height="6" rx="3" fill="white" />
+                  <rect x="15" y="34" width="50" height="6" rx="3" fill="white" />
+                  <rect x="35" y="48" width="30" height="6" rx="3" fill="white" />
+                </>
+              )}
             </svg>
           </button>
         </div>
@@ -138,7 +145,7 @@ export function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden sticky z-40 backdrop-blur-[7.5px] bg-[rgba(47,47,47,0.9)] w-full px-4 py-4 top-16 space-y-3">
+        <div className="md:hidden sticky z-40 backdrop-blur-[7.5px] bg-[rgba(47,47,47,0.9)] w-[97%] mx-auto px-4 py-4 top-17 space-y-3 rounded-b-lg">
           <div className="py-2 px-3 rounded-[6px] hover:bg-[rgba(233,244,249,0.1)] cursor-pointer">
             <p className="[word-break:break-word] font-['Chivo_Mono_Medium:Regular',sans-serif] leading-[1.3] not-italic relative shrink-0 text-[#e9f4f9] text-[12px] uppercase">
               Solutions

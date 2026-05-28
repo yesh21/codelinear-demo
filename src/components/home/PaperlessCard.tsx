@@ -1,6 +1,10 @@
 import { Button } from '../ui/Button';
 
-export function PaperlessCard() {
+interface PaperlessCardProps {
+  backgroundText?: string;
+}
+
+export function PaperlessCard({ backgroundText = 'CB7' }: PaperlessCardProps) {
   return (
     <section className="w-full px-4 py-16 sm:px-6 md:px-10 lg:px-16 xl:px-20">
       <div
@@ -28,7 +32,7 @@ export function PaperlessCard() {
               fontVariationSettings: "'wdth' 100",
             }}
           >
-            CB7
+            {backgroundText}
           </p>
         </div>
 

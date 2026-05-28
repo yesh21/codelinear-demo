@@ -1031,7 +1031,7 @@ export function DigitalBanking() {
         </div>
       </div>
       <div className="db-cta-wrapper">
-        <PaperlessCard />
+        <PaperlessCard backgroundText='N7'/>
       </div>
     </div>
   );

@@ -496,7 +496,8 @@ export function Footer() {
 
         {/* Copyright */}
         <p
-          className="font-['Archivo:Regular',sans-serif] font-normal leading-[1.3] opacity-30 text-[#e9f4f9] text-[14px] mt-12 lg:mt-[80px]"
+          className="relative font-['Archivo:Regular',sans-serif] font-normal leading-[1.3] opacity-30 
+          text-[#e9f4f9] text-[14px] mt-12 lg:mt-[80px] lg:left-[44%] lg:max-w-[50%]"
           style={{ fontVariationSettings: "'wdth' 100" }}
         >
           Copyright © 2022 by Linktia Infosystems Limited — [CB7 and N7 as
