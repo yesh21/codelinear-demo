@@ -1,11 +1,13 @@
+import { motion } from 'framer-motion';
 import { Button } from '../ui/Button';
 import svgPaths from '../../assets/svgs/svg-54ycx9j4u6';
 import imgPexelsPhotoByAndreaPiacquadio from '../../assets/images/ee861a9d0572ca7a13a963b266418b7612336b7f.png';
 import imgRectangle11 from '../../assets/images/8bd31b71a379644a52221930303daba4b56c660f.png';
+import { div } from 'framer-motion/client';
 
 export function Hero() {
   return (
-    <div className="relative mx-auto flex w-full max-w-[1440px] flex-col items-center overflow-x-hidden bg-[#000d12] px-4 py-12 lg:block lg:h-[811px] lg:px-0 lg:py-0">
+    <><div className="relative mx-auto flex w-full max-w-[1440px] flex-col items-center overflow-x-hidden bg-[#000d12] px-4 py-12 lg:block lg:h-[811px] lg:px-0 lg:py-0">
       <div className="absolute left-[calc(58.33%+33.13px)] z-0 size-[398.873px] top-[142.52px]">
         <div className="absolute inset-[-25.07%]">
           <svg
@@ -19,8 +21,7 @@ export function Hero() {
                 cx="299.437"
                 cy="299.437"
                 fill="url(#paint0_linear_1_1621)"
-                r="199.437"
-              />
+                r="199.437" />
             </g>
             <defs>
               <filter
@@ -37,12 +38,10 @@ export function Hero() {
                   in="SourceGraphic"
                   in2="BackgroundImageFix"
                   mode="normal"
-                  result="shape"
-                />
+                  result="shape" />
                 <feGaussianBlur
                   result="effect1_foregroundBlur_1_1621"
-                  stdDeviation="50"
-                />
+                  stdDeviation="50" />
               </filter>
               <linearGradient
                 gradientUnits="userSpaceOnUse"
@@ -60,7 +59,12 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="relative z-20 flex flex-col gap-8 items-start text-center lg:absolute lg:left-[80px] lg:top-[180.96px] lg:text-left">
+      <motion.div
+        className="relative z-20 flex flex-col gap-8 items-start text-center lg:absolute lg:left-[80px] lg:top-[180.96px] lg:text-left"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+      >
         <div className="flex flex-col gap-[16px] items-start text-[#e9f4f9]">
           <p
             className="font-['Archivo:Medium',sans-serif] font-medium leading-[1.15] text-[40px] tracking-[-0.4px] w-full max-w-[607.835px] sm:text-[52px] lg:text-[67px]"
@@ -80,15 +84,19 @@ export function Hero() {
           <Button variant="default">REQUEST DEMO</Button>
           <Button variant="outline">Contact Us</Button>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="relative z-10 mt-10 h-[301px] w-[562px] origin-top scale-[0.68] sm:scale-[0.85] md:scale-90 lg:absolute lg:left-[calc(58.33%-22px)] lg:top-2/5 lg:mt-0 lg:w-[562px] lg:-translate-y-1/2 lg:scale-100">
+      <motion.div
+        className="relative z-10 mt-10 h-[301px] w-[562px] origin-top scale-[0.68] sm:scale-[0.85] md:scale-90 lg:absolute lg:left-[calc(58.33%-22px)] lg:top-2/5 lg:mt-0 lg:w-[562px] lg:-translate-y-1/2 lg:scale-100"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+      >
         <div className="absolute z-0 h-[300.706px] left-[87.13px] rounded-[31px] top-[0.25px] w-[362.638px] overflow-hidden">
           <img
             alt=""
             className="absolute z-10 h-[100.04%] left-[-24.37%] max-w-none top-[-0.02%] w-[124.37%]"
-            src={imgPexelsPhotoByAndreaPiacquadio}
-          />
+            src={imgPexelsPhotoByAndreaPiacquadio} />
         </div>
 
         <div className="-translate-y-1/2 absolute z-20 backdrop-blur-[6px] bg-[rgba(255,255,255,0.4)] h-[177px] left-[353px] overflow-clip rounded-[12px] shadow-[0px_0px_27.571px_8.92px_rgba(0,0,0,0.25)] top-[calc(50%-39px)] w-[208px]">
@@ -99,8 +107,7 @@ export function Hero() {
                 <img
                   alt=""
                   className="absolute max-w-none object-cover rounded-[8.609px] size-full"
-                  src={imgRectangle11}
-                />
+                  src={imgRectangle11} />
               </div>
             </div>
             <p className="absolute font-['Inter:Bold',sans-serif] font-bold left-[39.68px] text-[8.609px] top-[22.62px] text-[#0d0d0c] leading-[normal]">
@@ -124,14 +131,12 @@ export function Hero() {
                     clipRule="evenodd"
                     d={svgPaths.p1c768e00}
                     fill="#0D0D0C"
-                    fillRule="evenodd"
-                  />
+                    fillRule="evenodd" />
                   <path
                     clipRule="evenodd"
                     d={svgPaths.p30528500}
                     fill="#0D0D0C"
-                    fillRule="evenodd"
-                  />
+                    fillRule="evenodd" />
                 </svg>
               </div>
             </div>
@@ -383,21 +388,18 @@ export function Hero() {
                     clipRule="evenodd"
                     d={svgPaths.p60c9000}
                     fill="#1B1B1B"
-                    fillRule="evenodd"
-                  />
+                    fillRule="evenodd" />
                   <path d={svgPaths.p16600e80} fill="#1B1B1B" />
                   <path
                     clipRule="evenodd"
                     d={svgPaths.p21f7e900}
                     fill="#1B1B1B"
-                    fillRule="evenodd"
-                  />
+                    fillRule="evenodd" />
                   <path
                     clipRule="evenodd"
                     d={svgPaths.pf77ed80}
                     fill="#1B1B1B"
-                    fillRule="evenodd"
-                  />
+                    fillRule="evenodd" />
                 </svg>
               </div>
             </div>
@@ -417,14 +419,12 @@ export function Hero() {
                     clipRule="evenodd"
                     d={svgPaths.p19bcf300}
                     fill="#1B1B1B"
-                    fillRule="evenodd"
-                  />
+                    fillRule="evenodd" />
                   <path
                     clipRule="evenodd"
                     d={svgPaths.p1d7fee70}
                     fill="#1B1B1B"
-                    fillRule="evenodd"
-                  />
+                    fillRule="evenodd" />
                 </svg>
               </div>
             </div>
@@ -466,8 +466,7 @@ export function Hero() {
                   x1="0.269025"
                   x2="183.744"
                   y1="0.269025"
-                  y2="0.269025"
-                />
+                  y2="0.269025" />
               </svg>
             </div>
           </div>
@@ -649,21 +648,18 @@ export function Hero() {
                     clipRule="evenodd"
                     d={svgPaths.p317e1b90}
                     fill="#1B1B1B"
-                    fillRule="evenodd"
-                  />
+                    fillRule="evenodd" />
                   <path d={svgPaths.p25495300} fill="#1B1B1B" />
                   <path
                     clipRule="evenodd"
                     d={svgPaths.p2da3da00}
                     fill="#1B1B1B"
-                    fillRule="evenodd"
-                  />
+                    fillRule="evenodd" />
                   <path
                     clipRule="evenodd"
                     d={svgPaths.p3fe37800}
                     fill="#1B1B1B"
-                    fillRule="evenodd"
-                  />
+                    fillRule="evenodd" />
                 </svg>
               </div>
             </div>
@@ -682,14 +678,12 @@ export function Hero() {
                     clipRule="evenodd"
                     d={svgPaths.p3bb94000}
                     fill="#1B1B1B"
-                    fillRule="evenodd"
-                  />
+                    fillRule="evenodd" />
                   <path
                     clipRule="evenodd"
                     d={svgPaths.p35b7e300}
                     fill="#1B1B1B"
-                    fillRule="evenodd"
-                  />
+                    fillRule="evenodd" />
                 </svg>
               </div>
             </div>
@@ -798,8 +792,7 @@ export function Hero() {
             <img
               alt=""
               className="absolute max-w-none object-cover rounded-[10.975px] size-full"
-              src={imgRectangle11}
-            />
+              src={imgRectangle11} />
           </div>
           <p className="absolute font-['Inter:Bold',sans-serif] font-bold left-[calc(16.67%+8.31px)] text-[10.975px] top-[-182.05px] text-[#0d0d0c] leading-[normal]">
             Toni Kross
@@ -821,14 +814,12 @@ export function Hero() {
                   clipRule="evenodd"
                   d={svgPaths.p37c3400}
                   fill="#0D0D0C"
-                  fillRule="evenodd"
-                />
+                  fillRule="evenodd" />
                 <path
                   clipRule="evenodd"
                   d={svgPaths.p1316dd80}
                   fill="#0D0D0C"
-                  fillRule="evenodd"
-                />
+                  fillRule="evenodd" />
               </svg>
             </div>
           </div>
@@ -871,8 +862,8 @@ export function Hero() {
             +$859
           </p>
         </div>
-      </div>
-      <div className="relative z-10 flex flex-col gap-4 items-start pt-6 text-center lg:absolute lg:left-[80px] lg:top-[555.06px] lg:pt-0 lg:text-left">
+        
+      </motion.div></div><div className="relative z-10 flex flex-col gap-4 items-start pt-6 text-center lg:absolute lg:left-[80px] lg:top-[555.06px] lg:pt-0 lg:text-left">
         <p
           className="capitalize font-['Archivo:Medium',sans-serif] font-medium leading-[1.3] opacity-70 text-[#e9f4f9] text-[16px] whitespace-nowrap"
           style={{ fontVariationSettings: "'wdth' 100" }}
@@ -892,8 +883,7 @@ export function Hero() {
                   clipRule="evenodd"
                   d={svgPaths.p1713f6f0}
                   fill="#586E84"
-                  fillRule="evenodd"
-                />
+                  fillRule="evenodd" />
               </svg>
             </div>
             <p className="font-['Roboto:Bold',sans-serif] font-bold text-[#586e84] text-[13.8px] leading-[1.1]">
@@ -933,8 +923,7 @@ export function Hero() {
                   clipRule="evenodd"
                   d={svgPaths.p1bfec400}
                   fill="#586E84"
-                  fillRule="evenodd"
-                />
+                  fillRule="evenodd" />
               </svg>
             </div>
             <p className="font-['Roboto:Bold',sans-serif] font-bold text-[#586e84] text-[13.8px] leading-[1.1]">
@@ -1002,7 +991,7 @@ export function Hero() {
             </p>
           </div>
         </div>
-      </div>
     </div>
+    </>
   );
 }
