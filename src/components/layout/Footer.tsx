@@ -72,7 +72,7 @@ function MaskGroup({ className, property1 = 'Default' }: MaskGroupProps) {
   const isVariant2 = property1 === 'Variant2';
   const isVariant3 = property1 === 'Variant3';
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
-  
+
   return (
     <div className={className || 'h-[232px] relative w-[440px] max-w-full'}>
       {/* First background layer */}
@@ -80,7 +80,7 @@ function MaskGroup({ className, property1 = 'Default' }: MaskGroupProps) {
         className="absolute bg-[#01b4fd] inset-[-4.33%_-32.1%_-25.78%_-22.61%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[126.872px_9.983px] mask-size-[399.658px_232.073px]"
         style={{ maskImage: `url('${imgRectangle77}')` }}
       />
-      
+
       {/* Main SVG layer with glow */}
       <div
         className={`absolute mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-size-[399.658px_232.073px] ${
@@ -157,7 +157,7 @@ function MaskGroup({ className, property1 = 'Default' }: MaskGroupProps) {
           </svg>
         </div>
       </div>
-      
+
       {/* Color dodge layer */}
       <div
         className={`absolute mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-size-[399.658px_232.073px] mix-blend-color-dodge ${

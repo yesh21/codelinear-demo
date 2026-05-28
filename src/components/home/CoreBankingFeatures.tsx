@@ -1,16 +1,22 @@
+import { motion } from 'framer-motion';
 import { imgImage3 } from '../../assets/svgs/svg-mwqa7';
 import imgImage5 from '../../assets/images/70d1f8da302fa5c8d9e1fea0fe2e2f72c1f9be9a.png';
 import svgPaths from '../../assets/svgs/svg-54ycx9j4u6';
 
-function BankingPreview() {
+function BankingDesktopPreview() {
   return (
-    <div
+    <motion.div
       className="
         relative
         h-[clamp(280px,62vw,470px)]
         w-[min(98vw,760px)]
         right-[25%]
       "
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+      viewport={{ once: true, amount: 0.3 }}
+
     >
       {/* Monitor frame */}
       <div className="absolute inset-0 rounded-t-[18px] border border-[#00b4fd]" />
@@ -38,7 +44,7 @@ function BankingPreview() {
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -122,7 +128,8 @@ function FeatureItem({ text }: { text: string }) {
 
 function ContentSection() {
   return (
-    <div
+    <motion.div
+
       className="
         z-10
         flex
@@ -133,6 +140,11 @@ function ContentSection() {
         xl:items-start
         xl:text-left
       "
+      initial={{ opacity: 0, x: 40 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+      viewport={{ once: true, amount: 0.3 }}
+
     >
       <div className="flex flex-col items-center gap-4 text-[#e9f4f9] xl:items-start">
         <p
@@ -175,7 +187,7 @@ function ContentSection() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -211,7 +223,7 @@ export function CoreBankingFeatures() {
       xl:justify-end
     "
         >
-          <BankingPreview />
+          <BankingDesktopPreview />
         </div>
         <div className="w-full xl:w-[55%]">
           <ContentSection />

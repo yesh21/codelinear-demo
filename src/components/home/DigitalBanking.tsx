@@ -1,4 +1,5 @@
 import { Button } from '../ui/Button';
+import { motion } from 'framer-motion';
 import { imgDesign } from '../../assets/svgs/svg-mwqa7';
 import svgPaths from '../../assets/svgs/svg-54ycx9j4u6';
 import imgBlue from '../../assets/images/91a87e77e6e75f676caf9ca74e36779a4047e4ae.png';
@@ -54,7 +55,7 @@ function CheckCircle() {
   );
 }
 
-function IPhoneMockup({ screenImage }) {
+function IPhoneMockup({ screenImage }: { screenImage: string }) {
   return (
     <div
       data-name="iPhone 13 Pro"
@@ -582,16 +583,12 @@ export function DigitalBanking() {
       <div className="db-layout">
         {/* ── LEFT: Hero column ── */}
         <div className="db-hero-col">
-          <div
-            className="        z-10
-        flex
-        flex-col
-        items-center
-        gap-6
-        text-center
-        xl:items-start
-        xl:text-left
-"
+          <motion.div
+            className="z-10 flex flex-col items-center gap-6 text-center xl:items-start xl:text-left"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             <div
               style={{
@@ -640,13 +637,19 @@ export function DigitalBanking() {
           xl:items-start
         "
             />
-          </div>
+          </motion.div>
         </div>
 
         {/* ── RIGHT: Feature rows column ── */}
         <div className="db-features-col">
           {/* ── Row 1: phone left, text right ── */}
-          <div className="db-feature-row">
+          <motion.div
+            className="db-feature-row"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut', delay: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
+          >
             <IPhoneMockup screenImage={imgDesign1} />
 
             <div className="db-feat-text">
@@ -782,10 +785,16 @@ export function DigitalBanking() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* ── Row 2: text left, phone right ── */}
-          <div className="db-feature-row reverse">
+          <motion.div
+            className="db-feature-row reverse"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut', delay: 0.12 }}
+            viewport={{ once: true, amount: 0.25 }}
+          >
             <IPhoneMockup screenImage={imgDesign2} />
 
             <div className="db-feat-text">
@@ -907,10 +916,16 @@ export function DigitalBanking() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* ── Row 3: phone left, text right ── */}
-          <div className="db-feature-row">
+          <motion.div
+            className="db-feature-row"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut', delay: 0.24 }}
+            viewport={{ once: true, amount: 0.25 }}
+          >
             <IPhoneMockup screenImage={imgDesign3} />
 
             <div className="db-feat-text">
@@ -1027,7 +1042,7 @@ export function DigitalBanking() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="db-cta-wrapper">

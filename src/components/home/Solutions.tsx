@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { Button } from '../ui/Button';
 import { TextLink } from '../ui/TextLink';
 import svgPaths from '../../assets/svgs/svg-54ycx9j4u6';
@@ -329,7 +330,13 @@ export function Solutions() {
       {/* Container */}
       <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-16 px-5 py-14 sm:px-8 md:px-10 lg:flex-row lg:gap-20 lg:px-20 lg:py-16">
         {/* Left */}
-        <div className="mx-auto flex w-full max-w-[433px] flex-col items-center gap-10 lg:items-start">
+        <motion.div
+          className="mx-auto flex w-full max-w-[433px] flex-col items-center gap-10 lg:items-start"
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
           <h2
             className="text-[30px] leading-[1.15] tracking-[-0.37px] text-[#E9F4F9] sm:text-[34px] lg:text-[37px]"
             style={{ fontVariationSettings: "'wdth' 100" }}
@@ -340,12 +347,24 @@ export function Solutions() {
           <Button variant="outline" className="w-fit">
             {SOLUTIONS_CONFIG.cta}
           </Button>
-        </div>
+        </motion.div>
 
         {/* Grid */}
         <div className="grid flex-1 grid-cols-1 justify-items-center gap-x-10 gap-y-14 sm:grid-cols-2 lg:justify-items-start">
-          {SOLUTIONS_CONFIG.cards.map((card) => (
-            <SolutionCard key={card.title} {...card} />
+          {SOLUTIONS_CONFIG.cards.map((card, index) => (
+            <motion.div
+              key={card.title}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.6,
+                ease: 'easeOut',
+                delay: index * 0.1,
+              }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <SolutionCard {...card} />
+            </motion.div>
           ))}
         </div>
       </div>

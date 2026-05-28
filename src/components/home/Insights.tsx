@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import svgPaths from '../../assets/svgs/svg-54ycx9j4u6';
 import { Button } from '../ui/Button';
 import { TextLink } from '../ui/TextLink';
@@ -11,7 +12,13 @@ export function Insights() {
       <div className="relative mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-20">
         <div className="grid gap-16 lg:grid-cols-[0.9fr_1.1fr]">
           {/* LEFT SIDE */}
-          <div className="flex flex-col items-center lg:items-start gap-12">
+          <motion.div
+            className="flex flex-col items-center lg:items-start gap-12"
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <h2
               className="max-w-[460px] text-4xl leading-[1.2] tracking-[-0.03em] text-[#e9f4f9] md:text-5xl"
               style={{ fontVariationSettings: "'wdth' 100" }}
@@ -20,7 +27,7 @@ export function Insights() {
             </h2>
 
             <Button variant="outline">Insights</Button>
-          </div>
+          </motion.div>
 
           <div className="flex flex-col gap-[29px]">
             <div className="grid min-h-[318px] overflow-hidden rounded-[18px] bg-[#01141b] md:grid-cols-[295px_1fr]">
@@ -88,10 +95,18 @@ export function Insights() {
             </div>
 
             <div className="grid gap-[29px] md:grid-cols-2">
-              {[1, 2].map((item) => (
-                <div
+              {[1, 2].map((item, index) => (
+                <motion.div
                   key={item}
                   className="relative min-h-[318px] overflow-hidden rounded-[18px] bg-[#01141b] px-4 py-6"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    ease: 'easeOut',
+                    delay: index * 0.15,
+                  }}
+                  viewport={{ once: true, amount: 0.3 }}
                 >
                   <div className="flex flex-col gap-[11px]">
                   <p className="font-['Chivo_Mono',_monospace] text-[12px] uppercase text-[#2490bb] tracking-wider opacity-80">
@@ -115,7 +130,7 @@ export function Insights() {
                   <button className="absolute bottom-4 left-4 right-4 rounded-[10px] border border-[rgba(233,244,249,0.5)] py-[10px] text-[12px] uppercase text-[rgba(233,244,249,0.5)] transition hover:border-white hover:text-white">
                     Read More
                   </button>
-                </div>
+                </motion.div>
               ))}
             </div>
 
