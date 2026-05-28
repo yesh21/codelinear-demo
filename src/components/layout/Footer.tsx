@@ -71,12 +71,17 @@ function NavLink({ label }: { label: string }) {
 function MaskGroup({ className, property1 = 'Default' }: MaskGroupProps) {
   const isVariant2 = property1 === 'Variant2';
   const isVariant3 = property1 === 'Variant3';
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
+  
   return (
-    <div className={className || 'h-[232px] relative w-[440px]'}>
+    <div className={className || 'h-[232px] relative w-[440px] max-w-full'}>
+      {/* First background layer */}
       <div
         className="absolute bg-[#01b4fd] inset-[-4.33%_-32.1%_-25.78%_-22.61%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[126.872px_9.983px] mask-size-[399.658px_232.073px]"
         style={{ maskImage: `url('${imgRectangle77}')` }}
       />
+      
+      {/* Main SVG layer with glow */}
       <div
         className={`absolute mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-size-[399.658px_232.073px] ${
           isVariant3
@@ -145,13 +150,15 @@ function MaskGroup({ className, property1 = 'Default' }: MaskGroupProps) {
                         ? 'effect1_foregroundBlur_1_1657'
                         : 'effect1_foregroundBlur_1_1550'
                   }
-                  stdDeviation="50"
+                  stdDeviation={isMobile ? '30' : '50'}
                 />
               </filter>
             </defs>
           </svg>
         </div>
       </div>
+      
+      {/* Color dodge layer */}
       <div
         className={`absolute mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-size-[399.658px_232.073px] mix-blend-color-dodge ${
           isVariant3
@@ -200,7 +207,7 @@ function MaskGroup({ className, property1 = 'Default' }: MaskGroupProps) {
                 />
                 <feGaussianBlur
                   result="effect1_foregroundBlur_1_1409"
-                  stdDeviation="50"
+                  stdDeviation={isMobile ? '30' : '50'}
                 />
               </filter>
             </defs>
@@ -275,7 +282,7 @@ export function Footer() {
         {/* ── DESKTOP layout (lg+) ── 4-col grid, logo spans 2 rows */}
         <div className="hidden lg:grid lg:grid-cols-[440px_1fr_1fr_1fr] lg:grid-rows-[auto_auto] gap-x-[34px] gap-y-[128px] items-start">
           <div className="col-start-1 row-start-1 row-span-2 flex items-start">
-            <MaskGroup className="h-[232px] relative w-[440px] max-w-full" />
+            <MaskGroup className="h-[232px] relative w-[440px]" />
           </div>
           <div className="col-start-2 row-start-1 flex flex-col gap-4 text-[#e9f4f9] text-[16px]">
             <p
@@ -381,9 +388,11 @@ export function Footer() {
 
         {/* ── MOBILE + TABLET layout (hidden on lg+) ── */}
         <div className="lg:hidden flex flex-col gap-10">
-          {/* Logo */}
-          <div className="flex items-start">
-            <MaskGroup className="h-[232px] relative w-[440px] max-w-full" />
+          {/* Logo - Scale down on mobile */}
+          <div className="flex items-start justify-center sm:justify-start w-full">
+            <div className="w-full max-w-[440px] origin-top-left scale-75 sm:scale-100">
+              <MaskGroup className="h-[232px] relative w-[440px]" />
+            </div>
           </div>
 
           {/* All 3 addresses — stacked on mobile, 2-col on tablet */}
