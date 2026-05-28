@@ -113,7 +113,7 @@ export function CaseStudies() {
   const [current, setCurrent] = useState(0);
   const [stageHeight, setStageHeight] = useState(null);
   const activeCardRef = useRef(null);
-  const touchStartX = useRef(null);
+  // const touchStartX = useRef(null);
   const n = slides.length;
 
   const goTo = (idx) => setCurrent(((idx % n) + n) % n);
@@ -132,14 +132,6 @@ export function CaseStudies() {
     if (activeCardRef.current) ro.observe(activeCardRef.current);
     return () => ro.disconnect();
   }, [current, measureCard]);
-
-  const handleTouchStart = (e) => { touchStartX.current = e.touches[0].clientX; };
-  const handleTouchEnd = (e) => {
-    if (touchStartX.current === null) return;
-    const dx = e.changedTouches[0].clientX - touchStartX.current;
-    if (Math.abs(dx) > 40) goTo(dx < 0 ? current + 1 : current - 1);
-    touchStartX.current = null;
-  };
 
   return (
     <>
@@ -344,19 +336,10 @@ export function CaseStudies() {
           Our Case Studies
         </p>
 
-        {/*
-          Stage height is driven by a hidden in-flow sizer div (same width/content
-          as the active card). The absolute cards overlay it. This means:
-          - No hardcoded heights anywhere
-          - Stage always exactly fits the active card
-          - Background cards can overflow visually (overflow:visible on stage)
-          - Controls always sit below the real card height
-        */}
         <div
           className="cs-stage"
           style={{ height: stageHeight ? stageHeight : undefined }}
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleTouchEnd}
+
         >
           {/* Hidden sizer: renders active card in normal flow to define stage height */}
           <div className="cs-sizer" aria-hidden="true" ref={activeCardRef}>
@@ -369,21 +352,21 @@ export function CaseStudies() {
             const abs = Math.abs(diff);
             const dir = diff > 0 ? 1 : -1;
 
-            let transform, opacity, zIndex, filter, pointerEvents;
+            let transform, opacity, zIndex, filter;
             if (abs === 0) {
               transform = "translateX(0%) scale(1)";
-              opacity = 1; zIndex = 10; filter = "none"; pointerEvents = "none";
+              opacity = 1; zIndex = 10; filter = "none";
             } else if (abs === 1) {
               transform = `translateX(${dir * 28}%) scale(0.78)`;
-              opacity = 0.38; zIndex = 5; filter = "brightness(0.45)"; pointerEvents = "auto";
+              opacity = 0.38; zIndex = 5; filter = "brightness(0.45)";
             } else {
               transform = `translateX(${dir * 32}%) scale(0.65)`;
-              opacity = 0; zIndex = 1; filter = "brightness(0.2)"; pointerEvents = "none";
+              opacity = 0; zIndex = 1; filter = "brightness(0.2)";
             }
 
             return (
               <div key={i} className="cs-card-wrap"
-                style={{ transform, opacity, zIndex, filter, pointerEvents }}
+                style={{ transform, opacity, zIndex, filter }}
                 onClick={() => abs > 0 && goTo(i)}
               >
                 <SlideCard slide={s} />
