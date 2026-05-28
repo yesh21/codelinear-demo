@@ -2,7 +2,7 @@ import { Button } from "../ui/Button";
 
 export function PaperlessCard() {
   return (
-    <section className="w-full px-4 py-10 sm:px-6 md:px-10 lg:px-16 xl:px-20">
+    <section className="w-full px-4 py-16 sm:px-6 md:px-10 lg:px-16 xl:px-20">
       <div
         className="
           relative
@@ -59,7 +59,6 @@ export function PaperlessCard() {
           </p>
         </div>
 
-        {/* Content */}
         <div
           className="
             relative
@@ -97,20 +96,9 @@ export function PaperlessCard() {
               Take the full advantage of going paper-less now.
             </h2>
 
-            <p
-              className="
-                mt-6
-                text-[#e9f4f9]
-                opacity-80
-                leading-[1.6]
-                text-[15px]
-                md:text-[16px]
-                max-w-[470px]
-              "
-              style={{
-                fontVariationSettings: "'wdth' 100",
-              }}
-            >
+            <p className="break-words flex-1 basis-0 font-medium leading-[1.3] min-w-0 opacity-70 text-[16px] mt-8 text-start"
+              style={{ fontFamily: "'Archivo', sans-serif" }}>
+
               CB7 helps your financial institution improve the client
               experience, automate and optimize procedures, simplify banking
               operations

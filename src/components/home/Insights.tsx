@@ -95,14 +95,12 @@ export function Insights() {
               </div>
             </div>
 
-            {/* BOTTOM CARDS */}
             <div className="grid gap-[29px] md:grid-cols-2">
               {[1, 2].map((item) => (
                 <div
                   key={item}
                   className="relative min-h-[318px] overflow-hidden rounded-[18px] bg-[#01141b] px-4 py-6"
                 >
-                  {/* CONTENT */}
                   <div className="flex flex-col gap-[11px]">
                     <p className="font-['Chivo_Mono_Medium'] text-[12px] uppercase text-[#2490bb] opacity-80">
                       Getting Started

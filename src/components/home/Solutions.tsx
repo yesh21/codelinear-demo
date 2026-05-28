@@ -83,10 +83,6 @@ const SOLUTIONS_CONFIG = {
   ],
 };
 
-/* =========================================
-   REUSABLE CARD
-========================================= */
-
 type SolutionCardProps = {
   title: string;
   description: string;
@@ -153,7 +149,8 @@ function SolutionCard({
       <div className="flex flex-col gap-6 text-[#E9F4F9]">
         <h3 className="text-[22px] leading-[1.2]">{title}</h3>
 
-        <p className="text-[16px] leading-[1.35] opacity-70">
+        <p className="break-words flex-1 basis-0 font-medium leading-[1.3] min-w-0 opacity-70 text-[16px] mt-[6px] text-start"
+          style={{ fontFamily: "'Archivo', sans-serif" }}>
           {description}
         </p>
       </div>

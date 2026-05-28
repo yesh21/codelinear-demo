@@ -1,5 +1,7 @@
 import { imgImage3 } from "../../assets/svgs/svg-mwqa7";
 import imgImage5 from "../../assets/images/70d1f8da302fa5c8d9e1fea0fe2e2f72c1f9be9a.png";
+import svgPaths from "../../assets/svgs/svg-54ycx9j4u6";
+
 
 function BankingPreview() {
   return (
@@ -58,38 +60,27 @@ const featuresRight = [
 
 function CheckIcon() {
   return (
-    <svg
-      className="h-[22px] w-[22px] shrink-0"
-      fill="none"
-      viewBox="0 0 29.9801 31.4077"
-    >
-      <g>
-        <circle
-          cx="14.8862"
-          cy="16.0496"
-          fill="url(#paint0_linear_1_1461)"
-          r="9.26182"
-        />
-        <path
-          d="M12.8 18.9l-3-3 1.4-1.4 1.6 1.6 4.1-4.1 1.4 1.4-5.5 5.5z"
-          fill="#E9F4F9"
-        />
-      </g>
-
-      <defs>
-        <linearGradient
-          id="paint0_linear_1_1461"
-          x1="-9.11865"
-          x2="25.1246"
-          y1="-15.9254"
-          y2="-17.5505"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor="#00B4FD" />
-          <stop offset="0.815786" stopColor="#003ACE" />
-        </linearGradient>
-      </defs>
-    </svg>
+    <div style={{ height: "31.408px", position: "relative", flexShrink: 0, width: "29.98px" }}>
+      <svg
+        style={{ position: "absolute", display: "block", inset: 0, width: "100%", height: "100%" }}
+        fill="none"
+        preserveAspectRatio="none"
+        viewBox="0 0 29.9801 31.4077"
+      >
+        <g id="Frame 15">
+          <circle cx="14.8862" cy="16.0496" fill="url(#cc_grad)" r="9.26182" />
+          <g id="ic:round-check">
+            <path d={svgPaths.p287f1d00} fill="var(--fill-0, #E9F4F9)" />
+          </g>
+        </g>
+        <defs>
+          <linearGradient gradientUnits="userSpaceOnUse" id="cc_grad" x1="-9.11865" x2="25.1246" y1="-15.9254" y2="-17.5505">
+            <stop stopColor="#00B4FD" />
+            <stop offset="0.815786" stopColor="#003ACE" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
   );
 }
 
@@ -100,13 +91,9 @@ function FeatureItem({ text }: { text: string }) {
 
       <p
         className="
-          text-[14px]
-          leading-[1.45]
-          text-[#e9f4f9]/80
-          md:text-[15px]
-          text-start
+          break-words flex-1 basis-0 font-medium leading-[1.3] min-w-0 opacity-70 text-[16px] mt-[6px] text-start
         "
-      >
+        style={{ fontFamily: "'Archivo', sans-serif" }}      >
         {text}
       </p>
     </div>

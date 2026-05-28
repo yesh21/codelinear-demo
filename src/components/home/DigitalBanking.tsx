@@ -273,8 +273,8 @@ export function DigitalBanking() {
           .db-feature-row.reverse  { flex-direction: row-reverse; gap: clamp(24px, 5vw, 76px); }
         }
 
-        /* Feature text block */
         .db-feat-text {
+          max-width: 300px;
           display: flex;
           flex-direction: column;
           gap: 43px;
@@ -477,16 +477,17 @@ export function DigitalBanking() {
               </p>
             </div>
             <Button variant="default">REQUEST DEMO</Button>
-          </div>
-          <TextLink
-            className="
+            <TextLink
+              className="
           mt-1
           flex
           flex-col
           gap-[3px]
           xl:items-start
         "
-          />        </div>
+            />
+          </div>
+        </div>
 
         {/* ── RIGHT: Feature rows column ── */}
         <div className="db-features-col">
