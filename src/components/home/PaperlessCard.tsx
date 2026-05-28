@@ -29,6 +29,11 @@ export function PaperlessCard({ backgroundText = 'CB7' }: PaperlessCardProps) {
             "
             style={{
               WebkitTextStroke: '2px rgba(0, 90, 130, 0.42)',
+                  WebkitMaskImage:
+      'linear-gradient(to bottom right, black 70%, transparent 100%)',
+    maskImage:
+      'linear-gradient(to bottom right, black 70%, transparent 100%)',
+
               fontVariationSettings: "'wdth' 100",
             }}
           >

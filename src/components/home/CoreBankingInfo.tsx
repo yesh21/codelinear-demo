@@ -107,6 +107,7 @@ export function CoreBankingInfo() {
         className="
           pointer-events-none
           absolute
+          font-['Archivo:Medium',sans-serif]
           left-[-14vw]
           top-[-2vw]
           select-none

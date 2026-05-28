@@ -6,7 +6,7 @@ import imgRectangle11 from '../../assets/images/8bd31b71a379644a52221930303daba4
 export function Hero() {
   return (
     <div className="relative mx-auto flex w-full max-w-[1440px] flex-col items-center overflow-x-hidden bg-[#000d12] px-4 py-12 lg:block lg:h-[811px] lg:px-0 lg:py-0">
-      <div className="absolute left-[calc(58.33%+33.13px)] z-0 size-[398.873px] top-[204.52px]">
+      <div className="absolute left-[calc(58.33%+33.13px)] z-0 size-[398.873px] top-[175.52px]">
         <div className="absolute inset-[-25.07%]">
           <svg
             className="block size-full"
@@ -60,7 +60,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="relative z-20 flex flex-col gap-8 items-start text-center lg:absolute lg:left-[80px] lg:top-[211.96px] lg:text-left">
+      <div className="relative z-20 flex flex-col gap-8 items-start text-center lg:absolute lg:left-[80px] lg:top-[180.96px] lg:text-left">
         <div className="flex flex-col gap-[16px] items-start text-[#e9f4f9]">
           <p
             className="font-['Archivo:Medium',sans-serif] font-medium leading-[1.15] text-[40px] tracking-[-0.4px] w-full max-w-[607.835px] sm:text-[52px] lg:text-[67px]"
@@ -82,7 +82,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="relative z-10 mt-10 h-[301px] w-[562px] origin-top scale-[0.68] sm:scale-[0.85] md:scale-90 lg:absolute lg:left-[calc(58.33%-22px)] lg:top-1/2 lg:mt-0 lg:w-[562px] lg:-translate-y-1/2 lg:scale-100">
+      <div className="relative z-10 mt-10 h-[301px] w-[562px] origin-top scale-[0.68] sm:scale-[0.85] md:scale-90 lg:absolute lg:left-[calc(58.33%-22px)] lg:top-2/5 lg:mt-0 lg:w-[562px] lg:-translate-y-1/2 lg:scale-100">
         <div className="absolute z-0 h-[300.706px] left-[87.13px] rounded-[31px] top-[0.25px] w-[362.638px] overflow-hidden">
           <img
             alt=""
@@ -872,7 +872,7 @@ export function Hero() {
           </p>
         </div>
       </div>
-      <div className="relative z-10 flex flex-col gap-4 items-start pt-6 text-center lg:absolute lg:left-[80px] lg:top-[655.06px] lg:pt-0 lg:text-left">
+      <div className="relative z-10 flex flex-col gap-4 items-start pt-6 text-center lg:absolute lg:left-[80px] lg:top-[555.06px] lg:pt-0 lg:text-left">
         <p
           className="capitalize font-['Archivo:Medium',sans-serif] font-medium leading-[1.3] opacity-70 text-[#e9f4f9] text-[16px] whitespace-nowrap"
           style={{ fontVariationSettings: "'wdth' 100" }}
