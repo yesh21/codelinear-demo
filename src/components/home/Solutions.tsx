@@ -54,13 +54,61 @@ const SOLUTIONS_CONFIG = {
       title: 'Loan Origination System',
       description:
         'N7 brings full capabilities across strategy, human-centred design, operations, engineering and data science to create and deliver disruptive innovation. Our approach to building digital banks is specifically designed to help clients ',
-      icon: svgPaths.p3b3d7a80,
-      gradientId: 'solution-gradient-4',
-      gradient: {
-        x1: '9.0592',
-        x2: '50.868',
-        y1: '-29.6748',
-        y2: '-17.2656',
+      multiPathSvg: {
+        viewBox: '0 0 38.7589 38.7571',
+        inset: 'inset-[20.9%_17.53%_0_0]',
+        paths: [
+          {
+            d: svgPaths.p3aaf9f80,
+            id: 'Vector',
+            gradientId: 'paint0_linear_1_1473',
+          },
+          {
+            d: svgPaths.p35e24800,
+            id: 'Vector_2',
+            gradientId: 'paint1_linear_1_1473',
+          },
+          {
+            d: svgPaths.p1beea2b0,
+            id: 'Vector_3',
+            gradientId: 'paint2_linear_1_1473',
+          },
+          {
+            d: svgPaths.p126a980,
+            id: 'Vector_4',
+            gradientId: 'paint3_linear_1_1473',
+          },
+        ],
+        gradients: [
+          {
+            id: 'paint0_linear_1_1473',
+            x1: '4.42716',
+            x2: '24.8519',
+            y1: '-19.5032',
+            y2: '-13.4418',
+          },
+          {
+            id: 'paint1_linear_1_1473',
+            x1: '24.6875',
+            x2: '45.1106',
+            y1: '-19.5032',
+            y2: '-13.4429',
+          },
+          {
+            id: 'paint2_linear_1_1473',
+            x1: '24.6891',
+            x2: '45.1123',
+            y1: '0.759029',
+            y2: '6.81938',
+          },
+          {
+            id: 'paint3_linear_1_1473',
+            x1: '4.42558',
+            x2: '24.8503',
+            y1: '0.759029',
+            y2: '6.82043',
+          },
+        ],
       },
     },
 
@@ -84,15 +132,31 @@ const SOLUTIONS_CONFIG = {
 type SolutionCardProps = {
   title: string;
   description: string;
-  icon: string;
-  gradientId: string;
+  icon?: string;
+  gradientId?: string;
   label?: string;
   strokeWidth?: number;
-  gradient: {
+  gradient?: {
     x1: string;
     x2: string;
     y1: string;
     y2: string;
+  };
+  multiPathSvg?: {
+    viewBox: string;
+    inset: string;
+    paths: Array<{
+      d: string;
+      id: string;
+      gradientId: string;
+    }>;
+    gradients: Array<{
+      id: string;
+      x1: string;
+      x2: string;
+      y1: string;
+      y2: string;
+    }>;
   };
 };
 
@@ -104,37 +168,76 @@ function SolutionCard({
   gradient,
   label,
   strokeWidth,
+  multiPathSvg,
 }: SolutionCardProps) {
   return (
     <div className="flex w-full max-w-[290px] flex-col gap-6">
       <div className="flex items-end justify-between">
         <div className="relative h-[49px] w-[47px]">
-          <svg
-            className="absolute inset-0 size-full"
-            fill="none"
-            preserveAspectRatio="none"
-            viewBox="0 0 47 49"
-          >
-            <path
-              d={icon}
-              stroke={`url(#${gradientId})`}
-              strokeWidth={strokeWidth}
-            />
-
-            <defs>
-              <linearGradient
-                id={gradientId}
-                gradientUnits="userSpaceOnUse"
-                x1={gradient.x1}
-                x2={gradient.x2}
-                y1={gradient.y1}
-                y2={gradient.y2}
+          {multiPathSvg ? (
+            <div className={`absolute ${multiPathSvg.inset}`}>
+              <svg
+                className="absolute block inset-0 size-full"
+                fill="none"
+                preserveAspectRatio="none"
+                viewBox={multiPathSvg.viewBox}
               >
-                <stop stopColor="white" />
-                <stop offset="1" stopColor="#8B8B8B" />
-              </linearGradient>
-            </defs>
-          </svg>
+                <g id="Group">
+                  {multiPathSvg.paths.map((path) => (
+                    <path
+                      key={path.id}
+                      d={path.d}
+                      id={path.id}
+                      stroke={`url(#${path.gradientId})`}
+                    />
+                  ))}
+                </g>
+                <defs>
+                  {multiPathSvg.gradients.map((grad) => (
+                    <linearGradient
+                      key={grad.id}
+                      gradientUnits="userSpaceOnUse"
+                      id={grad.id}
+                      x1={grad.x1}
+                      x2={grad.x2}
+                      y1={grad.y1}
+                      y2={grad.y2}
+                    >
+                      <stop stopColor="white" />
+                      <stop offset="1" stopColor="#8B8B8B" />
+                    </linearGradient>
+                  ))}
+                </defs>
+              </svg>
+            </div>
+          ) : (
+            <svg
+              className="absolute inset-0 size-full"
+              fill="none"
+              preserveAspectRatio="none"
+              viewBox="0 0 47 49"
+            >
+              <path
+                d={icon}
+                stroke={`url(#${gradientId})`}
+                strokeWidth={strokeWidth}
+              />
+
+              <defs>
+                <linearGradient
+                  id={gradientId}
+                  gradientUnits="userSpaceOnUse"
+                  x1={gradient?.x1}
+                  x2={gradient?.x2}
+                  y1={gradient?.y1}
+                  y2={gradient?.y2}
+                >
+                  <stop stopColor="white" />
+                  <stop offset="1" stopColor="#8B8B8B" />
+                </linearGradient>
+              </defs>
+            </svg>
+          )}
         </div>
 
         {label && (

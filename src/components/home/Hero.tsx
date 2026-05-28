@@ -6,7 +6,7 @@ import imgRectangle11 from '../../assets/images/8bd31b71a379644a52221930303daba4
 export function Hero() {
   return (
     <div className="relative mx-auto flex w-full max-w-[1440px] flex-col items-center overflow-x-hidden bg-[#000d12] px-4 py-12 lg:block lg:h-[811px] lg:px-0 lg:py-0">
-      <div className="absolute left-[calc(58.33%+33.13px)] z-0 size-[398.873px] top-[175.52px]">
+      <div className="absolute left-[calc(58.33%+33.13px)] z-0 size-[398.873px] top-[142.52px]">
         <div className="absolute inset-[-25.07%]">
           <svg
             className="block size-full"
