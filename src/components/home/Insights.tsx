@@ -66,7 +66,6 @@ export function Insights() {
                   </div>
                 </div>
               </div>
-              {/* RIGHT CONTENT */}
               <div className="flex flex-col justify-between px-4 py-6">
                 <div className="space-y-[11px]">
                   <p className="font-['Chivo_Mono_Medium'] text-[12px] uppercase text-[#2490bb] opacity-80">

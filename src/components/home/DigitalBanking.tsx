@@ -8,7 +8,6 @@ import imgDesign3 from '../../assets/images/c4701780c6a33ab5ff0dc2da3641196908b2
 import { TextLink } from '../ui/TextLink';
 import { PaperlessCard } from './PaperlessCard';
 
-/* ── Reusable check-circle (extracted from the repeated inline SVG) ── */
 function CheckCircle() {
   return (
     <div
@@ -55,7 +54,6 @@ function CheckCircle() {
   );
 }
 
-/* ── iPhone mockup wrapper — preserves original layered grid approach ── */
 function IPhoneMockup({ screenImage }) {
   return (
     <div
@@ -80,7 +78,6 @@ function IPhoneMockup({ screenImage }) {
           placeItems: 'start',
         }}
       >
-        {/* Phone shell — sized via CSS class for responsive control */}
         <div className="db-iphone-shell" data-name="Blue">
           <img
             alt=""
@@ -96,7 +93,6 @@ function IPhoneMockup({ screenImage }) {
           />
         </div>
 
-        {/* Screen content — offset via CSS class */}
         <div className="db-iphone-mockup-offset" data-name="Mockup">
           <div
             data-name="Mask group"
@@ -153,7 +149,6 @@ export function DigitalBanking() {
       }}
     >
       <style>{`
-        /* ── Responsive layout styles ── */
 
         /* Background "N7" watermark */
         .db-bg-n7 {
@@ -168,8 +163,8 @@ export function DigitalBanking() {
           pointer-events: none;
           -webkit-text-stroke: 2px rgba(0, 90, 130, 0.42);
           font-variation-settings: 'wdth' 100;
-          font-size: clamp(80px, 39.8vw, 572.632px);
-          left: clamp(0px, calc(16.67% + 37px), calc(16.67% + 37px));
+          font-size: clamp(350px, 40vw, 600px);
+          left: 25%;
           top: clamp(-20px, -4.62vw, -66.74px);
           z-index: 0;
         }
@@ -186,9 +181,10 @@ export function DigitalBanking() {
           white-space: nowrap;
           pointer-events: none;
           font-variation-settings: 'wdth' 100;
-          font-size: clamp(200px, 105.8vw, 1524.104px);
+          -webkit-text-stroke: 2px rgba(0, 90, 130, 0.42);
+          font-size: clamp(200px, 80.8vw, 1524.104px);
           left: clamp(50%, calc(58.33% + 46.92px), calc(58.33% + 46.92px));
-          top: clamp(300px, 66.4vw, 957.28px);
+          bottom: 8%;
           z-index: 0;
         }
 
@@ -272,7 +268,6 @@ export function DigitalBanking() {
           }
         }
 
-        /* Feature rows / right column */
         .db-features-col {
           flex: 1;
           display: flex;
@@ -1034,11 +1029,7 @@ export function DigitalBanking() {
             </div>
           </div>
         </div>
-        {/* end db-features-col */}
       </div>
-      {/* end db-layout */}
-
-      {/* ── CTA: Paperless card (full width below both columns) ── */}
       <div className="db-cta-wrapper">
         <PaperlessCard />
       </div>
