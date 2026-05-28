@@ -1,19 +1,32 @@
-import { Button } from "../ui/Button";
-import { imgDesign } from "../../assets/svgs/svg-mwqa7";
-import svgPaths from "../../assets/svgs/svg-54ycx9j4u6";
-import imgBlue from "../../assets/images/91a87e77e6e75f676caf9ca74e36779a4047e4ae.png";
-import imgDesign1 from "../../assets/images/6d999d2443b6ae0ad97fd4be1da685b8157cd047.png";
-import imgDesign2 from "../../assets/images/e8776fe148efa34a95f96a31a10335788da8955a.png";
-import imgDesign3 from "../../assets/images/c4701780c6a33ab5ff0dc2da3641196908b22afa.png";
-import { TextLink } from "../ui/TextLink";
-import { PaperlessCard } from "./PaperlessCard";
+import { Button } from '../ui/Button';
+import { imgDesign } from '../../assets/svgs/svg-mwqa7';
+import svgPaths from '../../assets/svgs/svg-54ycx9j4u6';
+import imgBlue from '../../assets/images/91a87e77e6e75f676caf9ca74e36779a4047e4ae.png';
+import imgDesign1 from '../../assets/images/6d999d2443b6ae0ad97fd4be1da685b8157cd047.png';
+import imgDesign2 from '../../assets/images/e8776fe148efa34a95f96a31a10335788da8955a.png';
+import imgDesign3 from '../../assets/images/c4701780c6a33ab5ff0dc2da3641196908b22afa.png';
+import { TextLink } from '../ui/TextLink';
+import { PaperlessCard } from './PaperlessCard';
 
 /* ── Reusable check-circle (extracted from the repeated inline SVG) ── */
 function CheckCircle() {
   return (
-    <div style={{ height: "31.408px", position: "relative", flexShrink: 0, width: "29.98px" }}>
+    <div
+      style={{
+        height: '31.408px',
+        position: 'relative',
+        flexShrink: 0,
+        width: '29.98px',
+      }}
+    >
       <svg
-        style={{ position: "absolute", display: "block", inset: 0, width: "100%", height: "100%" }}
+        style={{
+          position: 'absolute',
+          display: 'block',
+          inset: 0,
+          width: '100%',
+          height: '100%',
+        }}
         fill="none"
         preserveAspectRatio="none"
         viewBox="0 0 29.9801 31.4077"
@@ -25,7 +38,14 @@ function CheckCircle() {
           </g>
         </g>
         <defs>
-          <linearGradient gradientUnits="userSpaceOnUse" id="cc_grad" x1="-9.11865" x2="25.1246" y1="-15.9254" y2="-17.5505">
+          <linearGradient
+            gradientUnits="userSpaceOnUse"
+            id="cc_grad"
+            x1="-9.11865"
+            x2="25.1246"
+            y1="-15.9254"
+            y2="-17.5505"
+          >
             <stop stopColor="#00B4FD" />
             <stop offset="0.815786" stopColor="#003ACE" />
           </linearGradient>
@@ -41,10 +61,10 @@ function IPhoneMockup({ screenImage }) {
     <div
       data-name="iPhone 13 Pro"
       style={{
-        display: "grid",
-        gridTemplateColumns: "max-content",
-        gridTemplateRows: "max-content",
-        placeItems: "start",
+        display: 'grid',
+        gridTemplateColumns: 'max-content',
+        gridTemplateRows: 'max-content',
+        placeItems: 'start',
         lineHeight: 0,
         flexShrink: 0,
       }}
@@ -54,17 +74,24 @@ function IPhoneMockup({ screenImage }) {
         style={{
           gridColumn: 1,
           gridRow: 1,
-          display: "grid",
-          gridTemplateColumns: "max-content",
-          gridTemplateRows: "max-content",
-          placeItems: "start",
+          display: 'grid',
+          gridTemplateColumns: 'max-content',
+          gridTemplateRows: 'max-content',
+          placeItems: 'start',
         }}
       >
         {/* Phone shell — sized via CSS class for responsive control */}
         <div className="db-iphone-shell" data-name="Blue">
           <img
             alt=""
-            style={{ position: "absolute", left: 0, top: 0, maxWidth: "none", width: "100%", height: "100%" }}
+            style={{
+              position: 'absolute',
+              left: 0,
+              top: 0,
+              maxWidth: 'none',
+              width: '100%',
+              height: '100%',
+            }}
             src={imgBlue}
           />
         </div>
@@ -76,10 +103,10 @@ function IPhoneMockup({ screenImage }) {
             style={{
               gridColumn: 1,
               gridRow: 1,
-              display: "grid",
-              gridTemplateColumns: "max-content",
-              gridTemplateRows: "max-content",
-              placeItems: "start",
+              display: 'grid',
+              gridTemplateColumns: 'max-content',
+              gridTemplateRows: 'max-content',
+              placeItems: 'start',
             }}
           >
             <div
@@ -88,22 +115,22 @@ function IPhoneMockup({ screenImage }) {
               style={{
                 WebkitMaskImage: `url('${imgDesign}')`,
                 maskImage: `url('${imgDesign}')`,
-                WebkitMaskComposite: "source-in",
-                maskComposite: "intersect",
-                WebkitMaskClip: "no-clip",
-                maskClip: "no-clip",
+                WebkitMaskComposite: 'source-in',
+                maskComposite: 'intersect',
+                WebkitMaskClip: 'no-clip',
+                maskClip: 'no-clip',
               }}
             >
               <img
                 alt=""
                 style={{
-                  position: "absolute",
+                  position: 'absolute',
                   inset: 0,
-                  maxWidth: "none",
-                  objectFit: "cover",
-                  pointerEvents: "none",
-                  width: "100%",
-                  height: "100%",
+                  maxWidth: 'none',
+                  objectFit: 'cover',
+                  pointerEvents: 'none',
+                  width: '100%',
+                  height: '100%',
                 }}
                 src={screenImage}
               />
@@ -119,10 +146,10 @@ export function DigitalBanking() {
   return (
     <div
       style={{
-        background: "#e9f4f9",
-        overflow: "clip",
-        position: "relative",
-        width: "100%",
+        background: '#e9f4f9',
+        overflow: 'clip',
+        position: 'relative',
+        width: '100%',
       }}
     >
       <style>{`
@@ -340,22 +367,57 @@ export function DigitalBanking() {
       `}</style>
 
       {/* ── Decorative: "N7" background text ── */}
-      <p className="db-bg-n7" aria-hidden="true">N7</p>
+      <p className="db-bg-n7" aria-hidden="true">
+        N7
+      </p>
 
       {/* ── Decorative: Ellipse 3 (bottom-left blue glow) ── */}
       <div className="db-ellipse3" aria-hidden="true">
-        <div style={{ position: "absolute", inset: "-12.84%" }}>
-          <svg style={{ display: "block", width: "100%", height: "100%" }} fill="none" preserveAspectRatio="none" viewBox="0 0 978.743 978.743">
+        <div style={{ position: 'absolute', inset: '-12.84%' }}>
+          <svg
+            style={{ display: 'block', width: '100%', height: '100%' }}
+            fill="none"
+            preserveAspectRatio="none"
+            viewBox="0 0 978.743 978.743"
+          >
             <g filter="url(#filter0_f_1_1571)" id="Ellipse 3" opacity="0.1">
-              <circle cx="489.371" cy="489.371" fill="url(#paint0_linear_1_1571)" r="389.371" />
+              <circle
+                cx="489.371"
+                cy="489.371"
+                fill="url(#paint0_linear_1_1571)"
+                r="389.371"
+              />
             </g>
             <defs>
-              <filter colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse" height="978.743" id="filter0_f_1_1571" width="978.743" x="0" y="0">
+              <filter
+                colorInterpolationFilters="sRGB"
+                filterUnits="userSpaceOnUse"
+                height="978.743"
+                id="filter0_f_1_1571"
+                width="978.743"
+                x="0"
+                y="0"
+              >
                 <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                <feBlend in="SourceGraphic" in2="BackgroundImageFix" mode="normal" result="shape" />
-                <feGaussianBlur result="effect1_foregroundBlur_1_1571" stdDeviation="50" />
+                <feBlend
+                  in="SourceGraphic"
+                  in2="BackgroundImageFix"
+                  mode="normal"
+                  result="shape"
+                />
+                <feGaussianBlur
+                  result="effect1_foregroundBlur_1_1571"
+                  stdDeviation="50"
+                />
               </filter>
-              <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_1_1571" x1="434.557" x2="854.582" y1="74.5053" y2="155.505">
+              <linearGradient
+                gradientUnits="userSpaceOnUse"
+                id="paint0_linear_1_1571"
+                x1="434.557"
+                x2="854.582"
+                y1="74.5053"
+                y2="155.505"
+              >
                 <stop stopColor="#00CFFD" />
                 <stop offset="1" stopColor="#0015CE" />
               </linearGradient>
@@ -365,14 +427,43 @@ export function DigitalBanking() {
       </div>
 
       {/* ── Decorative: "7" background text ── */}
-      <p className="db-bg-7" aria-hidden="true" style={{ fontVariationSettings: "'wdth' 100" }}>7</p>
+      <p
+        className="db-bg-7"
+        aria-hidden="true"
+        style={{ fontVariationSettings: "'wdth' 100" }}
+      >
+        7
+      </p>
 
       {/* ── Decorative: Vector diagonal path ── */}
       <div className="db-vector" data-name="Vector" aria-hidden="true">
-        <svg style={{ position: "absolute", display: "block", inset: 0, width: "100%", height: "100%" }} fill="none" preserveAspectRatio="none" viewBox="0 0 1243.25 1245.21">
-          <path d={svgPaths.pe4fa380} id="Vector" opacity="0.2" stroke="url(#paint0_linear_1_1451)" />
+        <svg
+          style={{
+            position: 'absolute',
+            display: 'block',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+          }}
+          fill="none"
+          preserveAspectRatio="none"
+          viewBox="0 0 1243.25 1245.21"
+        >
+          <path
+            d={svgPaths.pe4fa380}
+            id="Vector"
+            opacity="0.2"
+            stroke="url(#paint0_linear_1_1451)"
+          />
           <defs>
-            <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_1_1451" x1="297.465" x2="1670.69" y1="-1313.1" y2="-906.258">
+            <linearGradient
+              gradientUnits="userSpaceOnUse"
+              id="paint0_linear_1_1451"
+              x1="297.465"
+              x2="1670.69"
+              y1="-1313.1"
+              y2="-906.258"
+            >
               <stop stopColor="#00B4FD" />
               <stop offset="1" stopColor="#003ACE" />
             </linearGradient>
@@ -382,18 +473,51 @@ export function DigitalBanking() {
 
       {/* ── Decorative: Ellipse 1 (top-left tiny orange glow) ── */}
       <div className="db-ellipse1" aria-hidden="true">
-        <div style={{ position: "absolute", inset: "-17.07%" }}>
-          <svg style={{ display: "block", width: "100%", height: "100%" }} fill="none" preserveAspectRatio="none" viewBox="0 0 785.85 785.85">
+        <div style={{ position: 'absolute', inset: '-17.07%' }}>
+          <svg
+            style={{ display: 'block', width: '100%', height: '100%' }}
+            fill="none"
+            preserveAspectRatio="none"
+            viewBox="0 0 785.85 785.85"
+          >
             <g filter="url(#filter0_f_1_1554)" id="Ellipse 1" opacity="0.02">
-              <circle cx="392.925" cy="392.925" fill="url(#paint0_linear_1_1554)" r="292.925" />
+              <circle
+                cx="392.925"
+                cy="392.925"
+                fill="url(#paint0_linear_1_1554)"
+                r="292.925"
+              />
             </g>
             <defs>
-              <filter colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse" height="785.85" id="filter0_f_1_1554" width="785.85" x="0" y="0">
+              <filter
+                colorInterpolationFilters="sRGB"
+                filterUnits="userSpaceOnUse"
+                height="785.85"
+                id="filter0_f_1_1554"
+                width="785.85"
+                x="0"
+                y="0"
+              >
                 <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                <feBlend in="SourceGraphic" in2="BackgroundImageFix" mode="normal" result="shape" />
-                <feGaussianBlur result="effect1_foregroundBlur_1_1554" stdDeviation="50" />
+                <feBlend
+                  in="SourceGraphic"
+                  in2="BackgroundImageFix"
+                  mode="normal"
+                  result="shape"
+                />
+                <feGaussianBlur
+                  result="effect1_foregroundBlur_1_1554"
+                  stdDeviation="50"
+                />
               </filter>
-              <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_1_1554" x1="240.173" x2="820.703" y1="-517.791" y2="-379.137">
+              <linearGradient
+                gradientUnits="userSpaceOnUse"
+                id="paint0_linear_1_1554"
+                x1="240.173"
+                x2="820.703"
+                y1="-517.791"
+                y2="-379.137"
+              >
                 <stop stopColor="#FDA700" />
                 <stop offset="1" stopColor="#CE5700" />
               </linearGradient>
@@ -404,18 +528,51 @@ export function DigitalBanking() {
 
       {/* ── Decorative: Ellipse 2 (top-right orange glow) ── */}
       <div className="db-ellipse2" aria-hidden="true">
-        <div style={{ position: "absolute", inset: "-12.84%" }}>
-          <svg style={{ display: "block", width: "100%", height: "100%" }} fill="none" preserveAspectRatio="none" viewBox="0 0 978.743 978.743">
+        <div style={{ position: 'absolute', inset: '-12.84%' }}>
+          <svg
+            style={{ display: 'block', width: '100%', height: '100%' }}
+            fill="none"
+            preserveAspectRatio="none"
+            viewBox="0 0 978.743 978.743"
+          >
             <g filter="url(#filter0_f_1_1503)" id="Ellipse 2" opacity="0.05">
-              <circle cx="489.371" cy="489.371" fill="url(#paint0_linear_1_1503)" r="389.371" />
+              <circle
+                cx="489.371"
+                cy="489.371"
+                fill="url(#paint0_linear_1_1503)"
+                r="389.371"
+              />
             </g>
             <defs>
-              <filter colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse" height="978.743" id="filter0_f_1_1503" width="978.743" x="0" y="0">
+              <filter
+                colorInterpolationFilters="sRGB"
+                filterUnits="userSpaceOnUse"
+                height="978.743"
+                id="filter0_f_1_1503"
+                width="978.743"
+                x="0"
+                y="0"
+              >
                 <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                <feBlend in="SourceGraphic" in2="BackgroundImageFix" mode="normal" result="shape" />
-                <feGaussianBlur result="effect1_foregroundBlur_1_1503" stdDeviation="50" />
+                <feBlend
+                  in="SourceGraphic"
+                  in2="BackgroundImageFix"
+                  mode="normal"
+                  result="shape"
+                />
+                <feGaussianBlur
+                  result="effect1_foregroundBlur_1_1503"
+                  stdDeviation="50"
+                />
               </filter>
-              <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_1_1503" x1="286.325" x2="1058" y1="-721.2" y2="-536.894">
+              <linearGradient
+                gradientUnits="userSpaceOnUse"
+                id="paint0_linear_1_1503"
+                x1="286.325"
+                x2="1058"
+                y1="-721.2"
+                y2="-536.894"
+              >
                 <stop stopColor="#FDA700" />
                 <stop offset="1" stopColor="#CE5700" />
               </linearGradient>
@@ -428,10 +585,10 @@ export function DigitalBanking() {
           MAIN LAYOUT
       ════════════════════════════════════════ */}
       <div className="db-layout">
-
         {/* ── LEFT: Hero column ── */}
         <div className="db-hero-col">
-          <div className="        z-10
+          <div
+            className="        z-10
         flex
         flex-col
         items-center
@@ -439,25 +596,26 @@ export function DigitalBanking() {
         text-center
         xl:items-start
         xl:text-left
-">
+"
+          >
             <div
               style={{
-                display: "flex",
-                flexDirection: "column",
+                display: 'flex',
+                flexDirection: 'column',
                 fontFamily: "'Archivo', sans-serif",
                 fontWeight: 400,
-                gap: "16px",
-                color: "#000d12",
+                gap: '16px',
+                color: '#000d12',
               }}
             >
               <p
                 style={{
                   lineHeight: 1.2,
                   opacity: 0.95,
-                  fontSize: "clamp(28px, 3.68vw, 53px)",
-                  letterSpacing: "-0.01em",
+                  fontSize: 'clamp(28px, 3.68vw, 53px)',
+                  letterSpacing: '-0.01em',
                   margin: 0,
-                  width: "min(438.987px, 100%)",
+                  width: 'min(438.987px, 100%)',
                   fontVariationSettings: "'wdth' 100",
                 }}
               >
@@ -466,14 +624,15 @@ export function DigitalBanking() {
               <p
                 style={{
                   lineHeight: 1.3,
-                  opacity: 0.70,
-                  fontSize: "16px",
+                  opacity: 0.7,
+                  fontSize: '16px',
                   margin: 0,
-                  width: "min(379.032px, 100%)",
+                  width: 'min(379.032px, 100%)',
                   fontVariationSettings: "'wdth' 100",
                 }}
               >
-                N7 helps your financial institution improve the client experience, automate and optimize procedures
+                N7 helps your financial institution improve the client
+                experience, automate and optimize procedures
               </p>
             </div>
             <Button variant="default">REQUEST DEMO</Button>
@@ -491,23 +650,28 @@ export function DigitalBanking() {
 
         {/* ── RIGHT: Feature rows column ── */}
         <div className="db-features-col">
-
           {/* ── Row 1: phone left, text right ── */}
           <div className="db-feature-row">
             <IPhoneMockup screenImage={imgDesign1} />
 
             <div className="db-feat-text">
-              <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '24px',
+                }}
+              >
                 <p
                   style={{
-                    wordBreak: "break-word",
+                    wordBreak: 'break-word',
                     fontFamily: "'Archivo', sans-serif",
                     fontWeight: 500,
                     lineHeight: 1.3,
-                    color: "#000d12",
-                    fontSize: "16px",
+                    color: '#000d12',
+                    fontSize: '16px',
                     margin: 0,
-                    width: "min(269px, 100%)",
+                    width: 'min(269px, 100%)',
                     fontVariationSettings: "'wdth' 100",
                   }}
                 >
@@ -515,37 +679,109 @@ export function DigitalBanking() {
                 </p>
                 <p
                   style={{
-                    wordBreak: "break-word",
+                    wordBreak: 'break-word',
                     fontFamily: "'Archivo', sans-serif",
                     fontWeight: 400,
                     lineHeight: 1.3,
-                    opacity: 0.70,
-                    color: "#000d12",
-                    fontSize: "16px",
+                    opacity: 0.7,
+                    color: '#000d12',
+                    fontSize: '16px',
                     margin: 0,
-                    width: "min(268.506px, 100%)",
+                    width: 'min(268.506px, 100%)',
                     fontVariationSettings: "'wdth' 100",
                   }}
                 >
-                  The governance of risk management with regulations is achieved by our risk management framework that is fully integrated to work with digital bank's operational-risk protocols and procedures.
+                  The governance of risk management with regulations is achieved
+                  by our risk management framework that is fully integrated to
+                  work with digital bank's operational-risk protocols and
+                  procedures.
                 </p>
               </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-                <div style={{ display: "flex", gap: "5px", alignItems: "center", width: "min(302px, 100%)" }}>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '12px',
+                }}
+              >
+                <div
+                  style={{
+                    display: 'flex',
+                    gap: '5px',
+                    alignItems: 'center',
+                    width: 'min(302px, 100%)',
+                  }}
+                >
                   <CheckCircle />
-                  <p style={{ wordBreak: "break-word", flex: "1 0 0", fontFamily: "'Archivo', sans-serif", fontWeight: 500, lineHeight: 1.3, minWidth: 0, opacity: 0.70, color: "#000d12", fontSize: "16px", margin: 0, fontVariationSettings: "'wdth' 100" }}>
+                  <p
+                    style={{
+                      wordBreak: 'break-word',
+                      flex: '1 0 0',
+                      fontFamily: "'Archivo', sans-serif",
+                      fontWeight: 500,
+                      lineHeight: 1.3,
+                      minWidth: 0,
+                      opacity: 0.7,
+                      color: '#000d12',
+                      fontSize: '16px',
+                      margin: 0,
+                      fontVariationSettings: "'wdth' 100",
+                    }}
+                  >
                     Pre-integrated Security System
                   </p>
                 </div>
-                <div style={{ display: "flex", gap: "5px", alignItems: "flex-start", width: "min(302px, 100%)" }}>
+                <div
+                  style={{
+                    display: 'flex',
+                    gap: '5px',
+                    alignItems: 'flex-start',
+                    width: 'min(302px, 100%)',
+                  }}
+                >
                   <CheckCircle />
-                  <p style={{ wordBreak: "break-word", flex: "1 0 0", fontFamily: "'Archivo', sans-serif", fontWeight: 500, lineHeight: 1.3, minWidth: 0, opacity: 0.70, color: "#000d12", fontSize: "16px", margin: 0, fontVariationSettings: "'wdth' 100" }}>
+                  <p
+                    style={{
+                      wordBreak: 'break-word',
+                      flex: '1 0 0',
+                      fontFamily: "'Archivo', sans-serif",
+                      fontWeight: 500,
+                      lineHeight: 1.3,
+                      minWidth: 0,
+                      opacity: 0.7,
+                      color: '#000d12',
+                      fontSize: '16px',
+                      margin: 0,
+                      fontVariationSettings: "'wdth' 100",
+                    }}
+                  >
                     Fully Compliant With Regulatory Requirement
                   </p>
                 </div>
-                <div style={{ display: "flex", gap: "5px", alignItems: "center", width: "min(302px, 100%)" }}>
+                <div
+                  style={{
+                    display: 'flex',
+                    gap: '5px',
+                    alignItems: 'center',
+                    width: 'min(302px, 100%)',
+                  }}
+                >
                   <CheckCircle />
-                  <p style={{ wordBreak: "break-word", flex: "1 0 0", fontFamily: "'Archivo', sans-serif", fontWeight: 500, lineHeight: 1.3, minWidth: 0, opacity: 0.70, color: "#000d12", fontSize: "16px", margin: 0, fontVariationSettings: "'wdth' 100" }}>
+                  <p
+                    style={{
+                      wordBreak: 'break-word',
+                      flex: '1 0 0',
+                      fontFamily: "'Archivo', sans-serif",
+                      fontWeight: 500,
+                      lineHeight: 1.3,
+                      minWidth: 0,
+                      opacity: 0.7,
+                      color: '#000d12',
+                      fontSize: '16px',
+                      margin: 0,
+                      fontVariationSettings: "'wdth' 100",
+                    }}
+                  >
                     Digitally Connected Core
                   </p>
                 </div>
@@ -558,17 +794,23 @@ export function DigitalBanking() {
             <IPhoneMockup screenImage={imgDesign2} />
 
             <div className="db-feat-text">
-              <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '24px',
+                }}
+              >
                 <p
                   style={{
-                    wordBreak: "break-word",
+                    wordBreak: 'break-word',
                     fontFamily: "'Archivo', sans-serif",
                     fontWeight: 500,
                     lineHeight: 1.3,
-                    color: "#000d12",
-                    fontSize: "16px",
+                    color: '#000d12',
+                    fontSize: '16px',
                     margin: 0,
-                    width: "min(269px, 100%)",
+                    width: 'min(269px, 100%)',
                     fontVariationSettings: "'wdth' 100",
                   }}
                 >
@@ -576,37 +818,95 @@ export function DigitalBanking() {
                 </p>
                 <p
                   style={{
-                    wordBreak: "break-word",
+                    wordBreak: 'break-word',
                     fontFamily: "'Archivo', sans-serif",
                     fontWeight: 400,
                     lineHeight: 1.3,
-                    opacity: 0.70,
-                    color: "#000d12",
-                    fontSize: "16px",
+                    opacity: 0.7,
+                    color: '#000d12',
+                    fontSize: '16px',
                     margin: 0,
-                    width: "min(268.506px, 100%)",
+                    width: 'min(268.506px, 100%)',
                     fontVariationSettings: "'wdth' 100",
                   }}
                 >
-                  Our Digital Banking solution and multilayered approach help financial institutions take advantage of digital transformation by ensuring customer trust and regulatory compliance.
+                  Our Digital Banking solution and multilayered approach help
+                  financial institutions take advantage of digital
+                  transformation by ensuring customer trust and regulatory
+                  compliance.
                 </p>
               </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: "12px", width: "min(269px, 100%)" }}>
-                <div style={{ display: "flex", gap: "5px", alignItems: "center" }}>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '12px',
+                  width: 'min(269px, 100%)',
+                }}
+              >
+                <div
+                  style={{ display: 'flex', gap: '5px', alignItems: 'center' }}
+                >
                   <CheckCircle />
-                  <p style={{ wordBreak: "break-word", flex: "1 0 0", fontFamily: "'Archivo', sans-serif", fontWeight: 500, lineHeight: 1.3, minWidth: 0, opacity: 0.70, color: "#000d12", fontSize: "16px", margin: 0, fontVariationSettings: "'wdth' 100" }}>
-                    {"Adaptive & Intelligent API monetization"}
+                  <p
+                    style={{
+                      wordBreak: 'break-word',
+                      flex: '1 0 0',
+                      fontFamily: "'Archivo', sans-serif",
+                      fontWeight: 500,
+                      lineHeight: 1.3,
+                      minWidth: 0,
+                      opacity: 0.7,
+                      color: '#000d12',
+                      fontSize: '16px',
+                      margin: 0,
+                      fontVariationSettings: "'wdth' 100",
+                    }}
+                  >
+                    {'Adaptive & Intelligent API monetization'}
                   </p>
                 </div>
-                <div style={{ display: "flex", gap: "5px", alignItems: "center" }}>
+                <div
+                  style={{ display: 'flex', gap: '5px', alignItems: 'center' }}
+                >
                   <CheckCircle />
-                  <p style={{ wordBreak: "break-word", flex: "1 0 0", fontFamily: "'Archivo', sans-serif", fontWeight: 500, lineHeight: 1.3, minWidth: 0, opacity: 0.70, color: "#000d12", fontSize: "16px", margin: 0, fontVariationSettings: "'wdth' 100" }}>
+                  <p
+                    style={{
+                      wordBreak: 'break-word',
+                      flex: '1 0 0',
+                      fontFamily: "'Archivo', sans-serif",
+                      fontWeight: 500,
+                      lineHeight: 1.3,
+                      minWidth: 0,
+                      opacity: 0.7,
+                      color: '#000d12',
+                      fontSize: '16px',
+                      margin: 0,
+                      fontVariationSettings: "'wdth' 100",
+                    }}
+                  >
                     Ambient User Experience
                   </p>
                 </div>
-                <div style={{ display: "flex", gap: "5px", alignItems: "center" }}>
+                <div
+                  style={{ display: 'flex', gap: '5px', alignItems: 'center' }}
+                >
                   <CheckCircle />
-                  <p style={{ wordBreak: "break-word", flex: "1 0 0", fontFamily: "'Archivo', sans-serif", fontWeight: 500, lineHeight: 1.3, minWidth: 0, opacity: 0.70, color: "#000d12", fontSize: "16px", margin: 0, fontVariationSettings: "'wdth' 100" }}>
+                  <p
+                    style={{
+                      wordBreak: 'break-word',
+                      flex: '1 0 0',
+                      fontFamily: "'Archivo', sans-serif",
+                      fontWeight: 500,
+                      lineHeight: 1.3,
+                      minWidth: 0,
+                      opacity: 0.7,
+                      color: '#000d12',
+                      fontSize: '16px',
+                      margin: 0,
+                      fontVariationSettings: "'wdth' 100",
+                    }}
+                  >
                     Cloud-native With lower TCO
                   </p>
                 </div>
@@ -619,17 +919,23 @@ export function DigitalBanking() {
             <IPhoneMockup screenImage={imgDesign3} />
 
             <div className="db-feat-text">
-              <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '24px',
+                }}
+              >
                 <p
                   style={{
-                    wordBreak: "break-word",
+                    wordBreak: 'break-word',
                     fontFamily: "'Archivo', sans-serif",
                     fontWeight: 500,
                     lineHeight: 1.3,
-                    color: "#000d12",
-                    fontSize: "16px",
+                    color: '#000d12',
+                    fontSize: '16px',
                     margin: 0,
-                    width: "min(269px, 100%)",
+                    width: 'min(269px, 100%)',
                     fontVariationSettings: "'wdth' 100",
                   }}
                 >
@@ -637,52 +943,105 @@ export function DigitalBanking() {
                 </p>
                 <p
                   style={{
-                    wordBreak: "break-word",
+                    wordBreak: 'break-word',
                     fontFamily: "'Archivo', sans-serif",
                     fontWeight: 400,
                     lineHeight: 1.3,
-                    opacity: 0.70,
-                    color: "#000d12",
-                    fontSize: "16px",
+                    opacity: 0.7,
+                    color: '#000d12',
+                    fontSize: '16px',
                     margin: 0,
-                    width: "min(268.506px, 100%)",
+                    width: 'min(268.506px, 100%)',
                     fontVariationSettings: "'wdth' 100",
                   }}
                 >
-                  Our Digital Banking out-of-the-box helps you to accelerate innovation while reducing risks and optimising operational costs for a seamless branchless experience.
+                  Our Digital Banking out-of-the-box helps you to accelerate
+                  innovation while reducing risks and optimising operational
+                  costs for a seamless branchless experience.
                 </p>
               </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-                <div style={{ display: "flex", gap: "5px", alignItems: "center" }}>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '12px',
+                }}
+              >
+                <div
+                  style={{ display: 'flex', gap: '5px', alignItems: 'center' }}
+                >
                   <CheckCircle />
-                  <p style={{ wordBreak: "break-word", fontFamily: "'Archivo', sans-serif", fontWeight: 500, lineHeight: 1.3, opacity: 0.70, color: "#000d12", fontSize: "16px", margin: 0, width: "min(268.414px, 100%)", fontVariationSettings: "'wdth' 100" }}>
-                    {"Branchless & Paperless Banking"}
+                  <p
+                    style={{
+                      wordBreak: 'break-word',
+                      fontFamily: "'Archivo', sans-serif",
+                      fontWeight: 500,
+                      lineHeight: 1.3,
+                      opacity: 0.7,
+                      color: '#000d12',
+                      fontSize: '16px',
+                      margin: 0,
+                      width: 'min(268.414px, 100%)',
+                      fontVariationSettings: "'wdth' 100",
+                    }}
+                  >
+                    {'Branchless & Paperless Banking'}
                   </p>
                 </div>
-                <div style={{ display: "flex", gap: "5px", alignItems: "center" }}>
+                <div
+                  style={{ display: 'flex', gap: '5px', alignItems: 'center' }}
+                >
                   <CheckCircle />
-                  <p style={{ wordBreak: "break-word", fontFamily: "'Archivo', sans-serif", fontWeight: 500, lineHeight: 1.3, opacity: 0.70, color: "#000d12", fontSize: "16px", margin: 0, width: "min(268.414px, 100%)", fontVariationSettings: "'wdth' 100" }}>
+                  <p
+                    style={{
+                      wordBreak: 'break-word',
+                      fontFamily: "'Archivo', sans-serif",
+                      fontWeight: 500,
+                      lineHeight: 1.3,
+                      opacity: 0.7,
+                      color: '#000d12',
+                      fontSize: '16px',
+                      margin: 0,
+                      width: 'min(268.414px, 100%)',
+                      fontVariationSettings: "'wdth' 100",
+                    }}
+                  >
                     Digital Transformation Capability
                   </p>
                 </div>
-                <div style={{ display: "flex", gap: "5px", alignItems: "center" }}>
+                <div
+                  style={{ display: 'flex', gap: '5px', alignItems: 'center' }}
+                >
                   <CheckCircle />
-                  <p style={{ wordBreak: "break-word", fontFamily: "'Archivo', sans-serif", fontWeight: 500, lineHeight: 1.3, opacity: 0.70, color: "#000d12", fontSize: "16px", margin: 0, width: "min(268.414px, 100%)", fontVariationSettings: "'wdth' 100" }}>
+                  <p
+                    style={{
+                      wordBreak: 'break-word',
+                      fontFamily: "'Archivo', sans-serif",
+                      fontWeight: 500,
+                      lineHeight: 1.3,
+                      opacity: 0.7,
+                      color: '#000d12',
+                      fontSize: '16px',
+                      margin: 0,
+                      width: 'min(268.414px, 100%)',
+                      fontVariationSettings: "'wdth' 100",
+                    }}
+                  >
                     Optimized, Adoptable and Scalable
                   </p>
                 </div>
               </div>
             </div>
           </div>
-
-        </div>{/* end db-features-col */}
-      </div>{/* end db-layout */}
+        </div>
+        {/* end db-features-col */}
+      </div>
+      {/* end db-layout */}
 
       {/* ── CTA: Paperless card (full width below both columns) ── */}
       <div className="db-cta-wrapper">
         <PaperlessCard />
       </div>
-
     </div>
   );
 }

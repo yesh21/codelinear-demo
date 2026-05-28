@@ -1,7 +1,6 @@
-import { imgImage3 } from "../../assets/svgs/svg-mwqa7";
-import imgImage5 from "../../assets/images/70d1f8da302fa5c8d9e1fea0fe2e2f72c1f9be9a.png";
-import svgPaths from "../../assets/svgs/svg-54ycx9j4u6";
-
+import { imgImage3 } from '../../assets/svgs/svg-mwqa7';
+import imgImage5 from '../../assets/images/70d1f8da302fa5c8d9e1fea0fe2e2f72c1f9be9a.png';
+import svgPaths from '../../assets/svgs/svg-54ycx9j4u6';
 
 function BankingPreview() {
   return (
@@ -25,10 +24,10 @@ function BankingPreview() {
         style={{
           maskImage: `url('${imgImage3}')`,
           WebkitMaskImage: `url('${imgImage3}')`,
-          maskRepeat: "no-repeat",
-          WebkitMaskRepeat: "no-repeat",
-          maskSize: "cover",
-          WebkitMaskSize: "cover",
+          maskRepeat: 'no-repeat',
+          WebkitMaskRepeat: 'no-repeat',
+          maskSize: 'cover',
+          WebkitMaskSize: 'cover',
         }}
       >
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -44,25 +43,38 @@ function BankingPreview() {
 }
 
 const featuresLeft = [
-  "Customer-On Boarding",
-  "Managing deposits and withdrawals",
-  "Transaction management",
-  "Interest Calculation",
-  "Payments processing (cash, cheques, mandates, NEFT, RTGS etc)",
+  'Customer-On Boarding',
+  'Managing deposits and withdrawals',
+  'Transaction management',
+  'Interest Calculation',
+  'Payments processing (cash, cheques, mandates, NEFT, RTGS etc)',
 ];
 
 const featuresRight = [
-  "CRM Activities",
-  "Configuring New Banking Products",
-  "Loan disbursal and Loan management",
-  "Establishing criteria for minimum balances, interest rates, number of withdrawals allowed and so on.",
+  'CRM Activities',
+  'Configuring New Banking Products',
+  'Loan disbursal and Loan management',
+  'Establishing criteria for minimum balances, interest rates, number of withdrawals allowed and so on.',
 ];
 
 function CheckIcon() {
   return (
-    <div style={{ height: "31.408px", position: "relative", flexShrink: 0, width: "29.98px" }}>
+    <div
+      style={{
+        height: '31.408px',
+        position: 'relative',
+        flexShrink: 0,
+        width: '29.98px',
+      }}
+    >
       <svg
-        style={{ position: "absolute", display: "block", inset: 0, width: "100%", height: "100%" }}
+        style={{
+          position: 'absolute',
+          display: 'block',
+          inset: 0,
+          width: '100%',
+          height: '100%',
+        }}
         fill="none"
         preserveAspectRatio="none"
         viewBox="0 0 29.9801 31.4077"
@@ -74,7 +86,14 @@ function CheckIcon() {
           </g>
         </g>
         <defs>
-          <linearGradient gradientUnits="userSpaceOnUse" id="cc_grad" x1="-9.11865" x2="25.1246" y1="-15.9254" y2="-17.5505">
+          <linearGradient
+            gradientUnits="userSpaceOnUse"
+            id="cc_grad"
+            x1="-9.11865"
+            x2="25.1246"
+            y1="-15.9254"
+            y2="-17.5505"
+          >
             <stop stopColor="#00B4FD" />
             <stop offset="0.815786" stopColor="#003ACE" />
           </linearGradient>
@@ -93,7 +112,8 @@ function FeatureItem({ text }: { text: string }) {
         className="
           break-words flex-1 basis-0 font-medium leading-[1.3] min-w-0 opacity-70 text-[16px] mt-[6px] text-start
         "
-        style={{ fontFamily: "'Archivo', sans-serif" }}      >
+        style={{ fontFamily: "'Archivo', sans-serif" }}
+      >
         {text}
       </p>
     </div>
@@ -123,7 +143,8 @@ function ContentSection() {
           "
           style={{ fontVariationSettings: "'wdth' 100" }}
         >
-          Run a more efficient, flexible,and digitally connected corebanking system
+          Run a more efficient, flexible,and digitally connected corebanking
+          system
         </p>
       </div>
 

@@ -1,83 +1,81 @@
-import { Button } from "../ui/Button";
-import { TextLink } from "../ui/TextLink";
-import svgPaths from "../../assets/svgs/svg-54ycx9j4u6";
+import { Button } from '../ui/Button';
+import { TextLink } from '../ui/TextLink';
+import svgPaths from '../../assets/svgs/svg-54ycx9j4u6';
 
 const SOLUTIONS_CONFIG = {
-  title: "All of our solutions are tailor-made to your needs",
-  cta: "request demo",
+  title: 'All of our solutions are tailor-made to your needs',
+  cta: 'request demo',
 
   cards: [
     {
-      title: "Core Banking CB7",
+      title: 'Core Banking CB7',
       description:
-        "CB7 helps your financial institution improve the client experience, automate and optimize procedures, simplify banking operations for your employees, improve risk management, increase productivity, and ensure full regulatory compliance.",
+        'CB7 helps your financial institution improve the client experience, automate and optimize procedures, simplify banking operations for your employees, improve risk management, increase productivity, and ensure full regulatory compliance.',
       icon: svgPaths.p5b71300,
-      gradientId: "solution-gradient-1",
+      gradientId: 'solution-gradient-1',
       gradient: {
-        x1: "10.0491",
-        x2: "56.4399",
-        y1: "-37.7616",
-        y2: "-24.0174",
+        x1: '10.0491',
+        x2: '56.4399',
+        y1: '-37.7616',
+        y2: '-24.0174',
       },
     },
 
     {
-      title: "Digital Banking N7",
+      title: 'Digital Banking N7',
       description:
-        "N7 brings full capabilities across strategy, human-centred design, operations, engineering and data science to create and deliver disruptive innovation. Our approach to building digital banks is specifically designed to help clients ",
+        'N7 brings full capabilities across strategy, human-centred design, operations, engineering and data science to create and deliver disruptive innovation. Our approach to building digital banks is specifically designed to help clients ',
       icon: svgPaths.p3b3d7a80,
-      gradientId: "solution-gradient-4",
+      gradientId: 'solution-gradient-4',
       gradient: {
-        x1: "9.27389",
-        x2: "52.0744",
-        y1: "-30.7795",
-        y2: "-18.0777",
+        x1: '9.27389',
+        x2: '52.0744',
+        y1: '-30.7795',
+        y2: '-18.0777',
       },
     },
 
     {
-      title: "Open Banking",
+      title: 'Open Banking',
       description:
-        "Our API banking helps you to gain actionable insights, enable account aggregation, streamline customer onboarding, KYC, and payment initiation, offer predictive budgeting tools, and introduce enhanced credit scoring."
-      , icon: svgPaths.p29dbb880,
-      gradientId: "solution-gradient-3",
+        'Our API banking helps you to gain actionable insights, enable account aggregation, streamline customer onboarding, KYC, and payment initiation, offer predictive budgeting tools, and introduce enhanced credit scoring.',
+      icon: svgPaths.p29dbb880,
+      gradientId: 'solution-gradient-3',
       strokeWidth: 0.5,
       gradient: {
-        x1: "11.5396",
-        x2: "54.3415",
-        y1: "-30.6272",
-        y2: "-17.9249",
+        x1: '11.5396',
+        x2: '54.3415',
+        y1: '-30.6272',
+        y2: '-17.9249',
       },
     },
 
     {
-      title: "Loan Origination System",
+      title: 'Loan Origination System',
       description:
-        "N7 brings full capabilities across strategy, human-centred design, operations, engineering and data science to create and deliver disruptive innovation. Our approach to building digital banks is specifically designed to help clients ",
+        'N7 brings full capabilities across strategy, human-centred design, operations, engineering and data science to create and deliver disruptive innovation. Our approach to building digital banks is specifically designed to help clients ',
       icon: svgPaths.p3b3d7a80,
-      gradientId: "solution-gradient-4",
+      gradientId: 'solution-gradient-4',
       gradient: {
-        x1: "9.0592",
-        x2: "50.868",
-        y1: "-29.6748",
-        y2: "-17.2656",
+        x1: '9.0592',
+        x2: '50.868',
+        y1: '-29.6748',
+        y2: '-17.2656',
       },
     },
 
-
-
     {
-      title: "Loan Management System",
+      title: 'Loan Management System',
       description:
-        "N7 brings full capabilities across strategy, human-centred design, operations, engineering and data science to create and deliver disruptive innovation. Our approach to building digital banks is specifically designed to help clients ",
-      label: "NBFC",
+        'N7 brings full capabilities across strategy, human-centred design, operations, engineering and data science to create and deliver disruptive innovation. Our approach to building digital banks is specifically designed to help clients ',
+      label: 'NBFC',
       icon: svgPaths.p2f3b4400,
-      gradientId: "solution-gradient-5",
+      gradientId: 'solution-gradient-5',
       gradient: {
-        x1: "9.27389",
-        x2: "52.0744",
-        y1: "-30.7795",
-        y2: "-18.0777",
+        x1: '9.27389',
+        x2: '52.0744',
+        y1: '-30.7795',
+        y2: '-18.0777',
       },
     },
   ],
@@ -149,8 +147,10 @@ function SolutionCard({
       <div className="flex flex-col gap-6 text-[#E9F4F9]">
         <h3 className="text-[22px] leading-[1.2]">{title}</h3>
 
-        <p className="break-words flex-1 basis-0 font-medium leading-[1.3] min-w-0 opacity-70 text-[16px] mt-[6px] text-start"
-          style={{ fontFamily: "'Archivo', sans-serif" }}>
+        <p
+          className="break-words flex-1 basis-0 font-medium leading-[1.3] min-w-0 opacity-70 text-[16px] mt-[6px] text-start"
+          style={{ fontFamily: "'Archivo', sans-serif" }}
+        >
           {description}
         </p>
       </div>

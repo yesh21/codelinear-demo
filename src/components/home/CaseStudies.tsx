@@ -1,7 +1,7 @@
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useEffect, useCallback } from 'react';
 
 // ── Brand pattern ─────────────────────────────────────────────────────────────
-function BrandPattern({ color = "#00B4FD" }) {
+function BrandPattern({ color = '#00B4FD' }) {
   const X = ({ tx = 0, ty = 0 }) => (
     <g transform={`translate(${tx},${ty})`}>
       <path
@@ -12,10 +12,16 @@ function BrandPattern({ color = "#00B4FD" }) {
     </g>
   );
   return (
-    <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg"
-      style={{ width: "74%", height: "74%" }}>
-      <X tx={0} ty={0} /><X tx={84} ty={0} />
-      <X tx={0} ty={84} /><X tx={84} ty={84} />
+    <svg
+      viewBox="0 0 160 160"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ width: '74%', height: '74%' }}
+    >
+      <X tx={0} ty={0} />
+      <X tx={84} ty={0} />
+      <X tx={0} ty={84} />
+      <X tx={84} ty={84} />
     </svg>
   );
 }
@@ -25,21 +31,47 @@ function NavBtn({ direction, onClick }) {
   return (
     <button
       onClick={onClick}
-      aria-label={direction === "left" ? "Previous" : "Next"}
+      aria-label={direction === 'left' ? 'Previous' : 'Next'}
       style={{
-        width: 42, height: 42, borderRadius: "50%",
-        border: "1.36px solid #00B4FD", background: "transparent",
-        cursor: "pointer", display: "flex", alignItems: "center",
-        justifyContent: "center", flexShrink: 0, padding: 0,
-        transition: "background 0.2s",
+        width: 42,
+        height: 42,
+        borderRadius: '50%',
+        border: '1.36px solid #00B4FD',
+        background: 'transparent',
+        cursor: 'pointer',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexShrink: 0,
+        padding: 0,
+        transition: 'background 0.2s',
       }}
-      onMouseEnter={e => e.currentTarget.style.background = "rgba(0,180,253,0.10)"}
-      onMouseLeave={e => e.currentTarget.style.background = "transparent"}
-    >
-      {direction === "left"
-        ? <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7L9 12" stroke="#00B4FD" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
-        : <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 2L10 7L5 12" stroke="#00B4FD" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+      onMouseEnter={(e) =>
+        (e.currentTarget.style.background = 'rgba(0,180,253,0.10)')
       }
+      onMouseLeave={(e) => (e.currentTarget.style.background = 'transparent')}
+    >
+      {direction === 'left' ? (
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path
+            d="M9 2L4 7L9 12"
+            stroke="#00B4FD"
+            strokeWidth="1.2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : (
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path
+            d="M5 2L10 7L5 12"
+            stroke="#00B4FD"
+            strokeWidth="1.2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      )}
     </button>
   );
 }
@@ -47,15 +79,21 @@ function NavBtn({ direction, onClick }) {
 // ── Dots ──────────────────────────────────────────────────────────────────────
 function Dots({ total, current, onDotClick }) {
   return (
-    <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+    <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
       {Array.from({ length: total }).map((_, i) => (
-        <button key={i} onClick={() => onDotClick(i)}
+        <button
+          key={i}
+          onClick={() => onDotClick(i)}
           aria-label={`Go to slide ${i + 1}`}
           style={{
-            height: 12, width: i === current ? 38 : 12, borderRadius: 6,
-            background: i === current ? "#0B4B63" : "transparent",
-            border: "0.86px solid #0B4B63", cursor: "pointer", padding: 0,
-            transition: "all 0.3s cubic-bezier(0.4,0,0.2,1)",
+            height: 12,
+            width: i === current ? 38 : 12,
+            borderRadius: 6,
+            background: i === current ? '#0B4B63' : 'transparent',
+            border: '0.86px solid #0B4B63',
+            cursor: 'pointer',
+            padding: 0,
+            transition: 'all 0.3s cubic-bezier(0.4,0,0.2,1)',
           }}
         />
       ))}
@@ -66,17 +104,39 @@ function Dots({ total, current, onDotClick }) {
 // ── View All ──────────────────────────────────────────────────────────────────
 function ViewAll() {
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 3, cursor: "pointer", flexShrink: 0 }}>
-      <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
-        <span style={{
-          fontFamily: "'Chivo Mono', monospace", fontSize: 13, color: "#00B4FD",
-          textTransform: "uppercase", letterSpacing: "0.04em", whiteSpace: "nowrap",
-        }}>view all</span>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 3,
+        cursor: 'pointer',
+        flexShrink: 0,
+      }}
+    >
+      <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+        <span
+          style={{
+            fontFamily: "'Chivo Mono', monospace",
+            fontSize: 13,
+            color: '#00B4FD',
+            textTransform: 'uppercase',
+            letterSpacing: '0.04em',
+            whiteSpace: 'nowrap',
+          }}
+        >
+          view all
+        </span>
         <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
-          <path d="M2 7H12M8 3L12 7L8 11" stroke="#00B4FD" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round" />
+          <path
+            d="M2 7H12M8 3L12 7L8 11"
+            stroke="#00B4FD"
+            strokeWidth="1.1"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       </div>
-      <div style={{ height: 1, width: 32.6, background: "#00B4FD" }} />
+      <div style={{ height: 1, width: 32.6, background: '#00B4FD' }} />
     </div>
   );
 }
@@ -84,20 +144,45 @@ function ViewAll() {
 // ── ZoomerrIcon ───────────────────────────────────────────────────────────────
 function ZoomerrIcon() {
   return (
-    <svg width="28" height="28" viewBox="0 0 30 30" fill="none" style={{ flexShrink: 0 }}>
-      <path fillRule="evenodd" clipRule="evenodd"
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 30 30"
+      fill="none"
+      style={{ flexShrink: 0 }}
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M15 1.5C7.544 1.5 1.5 7.544 1.5 15S7.544 28.5 15 28.5 28.5 22.456 28.5 15 22.456 1.5 15 1.5zM8.5 11l9.5-2.5-4.5 5.5 5.5 1.5-9 4 3-5.5L8.5 11z"
-        fill="#586E84" />
+        fill="#586E84"
+      />
     </svg>
   );
 }
 
 // ── Data ──────────────────────────────────────────────────────────────────────
 const slides = [
-  { tag: "Getting Started", title: "How we help brand reach out to more people", color: "#00B4FD" },
-  { tag: "Brand Strategy", title: "Building identity systems that scale globally", color: "#7c5cfc" },
-  { tag: "Growth & Scale", title: "Turning audience insights into measurable results", color: "#00c98d" },
-  { tag: "Case Analysis", title: "Data-driven campaigns that move the needle", color: "#f97316" },
+  {
+    tag: 'Getting Started',
+    title: 'How we help brand reach out to more people',
+    color: '#00B4FD',
+  },
+  {
+    tag: 'Brand Strategy',
+    title: 'Building identity systems that scale globally',
+    color: '#7c5cfc',
+  },
+  {
+    tag: 'Growth & Scale',
+    title: 'Turning audience insights into measurable results',
+    color: '#00c98d',
+  },
+  {
+    tag: 'Case Analysis',
+    title: 'Data-driven campaigns that move the needle',
+    color: '#f97316',
+  },
 ];
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
@@ -327,19 +412,25 @@ export function CaseStudies() {
 
       <div className="cs-section">
         {/* Title */}
-        <p style={{
-          fontFamily: "'Archivo', sans-serif", fontWeight: 400,
-          fontSize: "clamp(28px, 4.5vw, 53px)", color: "#e9f4f9",
-          textAlign: "center", letterSpacing: "-0.01em", lineHeight: 1.2,
-          marginBottom: "clamp(20px, 3vw, 40px)", padding: "0 16px",
-        }}>
+        <p
+          style={{
+            fontFamily: "'Archivo', sans-serif",
+            fontWeight: 400,
+            fontSize: 'clamp(28px, 4.5vw, 53px)',
+            color: '#e9f4f9',
+            textAlign: 'center',
+            letterSpacing: '-0.01em',
+            lineHeight: 1.2,
+            marginBottom: 'clamp(20px, 3vw, 40px)',
+            padding: '0 16px',
+          }}
+        >
           Our Case Studies
         </p>
 
         <div
           className="cs-stage"
           style={{ height: stageHeight ? stageHeight : undefined }}
-
         >
           {/* Hidden sizer: renders active card in normal flow to define stage height */}
           <div className="cs-sizer" aria-hidden="true" ref={activeCardRef}>
@@ -354,18 +445,26 @@ export function CaseStudies() {
 
             let transform, opacity, zIndex, filter;
             if (abs === 0) {
-              transform = "translateX(0%) scale(1)";
-              opacity = 1; zIndex = 10; filter = "none";
+              transform = 'translateX(0%) scale(1)';
+              opacity = 1;
+              zIndex = 10;
+              filter = 'none';
             } else if (abs === 1) {
               transform = `translateX(${dir * 28}%) scale(0.78)`;
-              opacity = 0.38; zIndex = 5; filter = "brightness(0.45)";
+              opacity = 0.38;
+              zIndex = 5;
+              filter = 'brightness(0.45)';
             } else {
               transform = `translateX(${dir * 32}%) scale(0.65)`;
-              opacity = 0; zIndex = 1; filter = "brightness(0.2)";
+              opacity = 0;
+              zIndex = 1;
+              filter = 'brightness(0.2)';
             }
 
             return (
-              <div key={i} className="cs-card-wrap"
+              <div
+                key={i}
+                className="cs-card-wrap"
                 style={{ transform, opacity, zIndex, filter }}
                 onClick={() => abs > 0 && goTo(i)}
               >
@@ -378,16 +477,20 @@ export function CaseStudies() {
         {/* Controls — always below the stage, never overlapping */}
         <div className="cs-controls">
           {/* Desktop: prev/dots/next inline with absolute view-all */}
-          <div className="cs-nav-row" style={{ display: "contents" }}>
+          <div className="cs-nav-row" style={{ display: 'contents' }}>
             <NavBtn direction="left" onClick={() => goTo(current - 1)} />
             <Dots total={n} current={current} onDotClick={goTo} />
             <NavBtn direction="right" onClick={() => goTo(current + 1)} />
           </div>
 
-          <div className="cs-view-all-abs"><ViewAll /></div>
+          <div className="cs-view-all-abs">
+            <ViewAll />
+          </div>
 
           {/* Mobile: view all as its own row */}
-          <div className="cs-view-all-inline"><ViewAll /></div>
+          <div className="cs-view-all-inline">
+            <ViewAll />
+          </div>
         </div>
       </div>
     </>

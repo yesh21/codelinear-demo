@@ -1,4 +1,4 @@
-import { Button } from "../ui/Button";
+import { Button } from '../ui/Button';
 
 export function PaperlessCard() {
   return (
@@ -21,7 +21,7 @@ export function PaperlessCard() {
         "
         style={{
           background:
-            "linear-gradient(115.899deg, rgb(3, 30, 42) 12.22%, rgb(0, 13, 18) 59.256%)",
+            'linear-gradient(115.899deg, rgb(3, 30, 42) 12.22%, rgb(0, 13, 18) 59.256%)',
         }}
       >
         {/* Background CB7 */}
@@ -51,7 +51,7 @@ export function PaperlessCard() {
               xl:text-[572px]
             "
             style={{
-              WebkitTextStroke: "2px rgba(0, 90, 130, 0.42)",
+              WebkitTextStroke: '2px rgba(0, 90, 130, 0.42)',
               fontVariationSettings: "'wdth' 100",
             }}
           >
@@ -96,9 +96,10 @@ export function PaperlessCard() {
               Take the full advantage of going paper-less now.
             </h2>
 
-            <p className="break-words flex-1 basis-0 font-medium leading-[1.3] min-w-0 opacity-70 text-[16px] mt-8 text-start"
-              style={{ fontFamily: "'Archivo', sans-serif" }}>
-
+            <p
+              className="break-words flex-1 basis-0 font-medium leading-[1.3] min-w-0 opacity-70 text-[16px] mt-8 text-start"
+              style={{ fontFamily: "'Archivo', sans-serif" }}
+            >
               CB7 helps your financial institution improve the client
               experience, automate and optimize procedures, simplify banking
               operations
@@ -118,17 +119,11 @@ export function PaperlessCard() {
               lg:w-auto
             "
           >
-            <Button
-              variant="outline"
-              className="w-full sm:w-auto"
-            >
+            <Button variant="outline" className="w-full sm:w-auto">
               Contact Us
             </Button>
 
-            <Button
-              variant="default"
-              className="w-full sm:w-auto"
-            >
+            <Button variant="default" className="w-full sm:w-auto">
               REQUEST DEMO
             </Button>
           </div>

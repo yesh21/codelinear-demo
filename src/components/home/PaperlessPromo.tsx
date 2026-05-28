@@ -1,4 +1,4 @@
-import { Button } from "../ui/Button";
+import { Button } from '../ui/Button';
 
 export function PaperlessPromo() {
   return (
@@ -36,12 +36,12 @@ export function PaperlessPromo() {
             Take the full advantage of going paper-less now.
           </h2>
 
-          <p className="break-words flex-1 basis-0 font-medium leading-[1.3] min-w-0 opacity-70 text-[16px] mt-8 text-start"
-            style={{ fontFamily: "'Archivo', sans-serif" }}>
-
-            CB7 helps your financial institution improve the client
-            experience, automate and optimize procedures, simplify banking
-            operations
+          <p
+            className="break-words flex-1 basis-0 font-medium leading-[1.3] min-w-0 opacity-70 text-[16px] mt-8 text-start"
+            style={{ fontFamily: "'Archivo', sans-serif" }}
+          >
+            CB7 helps your financial institution improve the client experience,
+            automate and optimize procedures, simplify banking operations
           </p>
         </div>
 
@@ -58,17 +58,11 @@ export function PaperlessPromo() {
               lg:w-auto
             "
         >
-          <Button
-            variant="outline"
-            className="w-full sm:w-auto"
-          >
+          <Button variant="outline" className="w-full sm:w-auto">
             Contact Us
           </Button>
 
-          <Button
-            variant="default"
-            className="w-full sm:w-auto"
-          >
+          <Button variant="default" className="w-full sm:w-auto">
             REQUEST DEMO
           </Button>
         </div>

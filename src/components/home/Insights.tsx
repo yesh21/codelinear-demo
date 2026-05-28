@@ -1,6 +1,6 @@
-import svgPaths from "../../assets/svgs/svg-54ycx9j4u6";
-import { Button } from "../ui/Button";
-import { TextLink } from "../ui/TextLink";
+import svgPaths from '../../assets/svgs/svg-54ycx9j4u6';
+import { Button } from '../ui/Button';
+import { TextLink } from '../ui/TextLink';
 
 export function Insights() {
   return (
@@ -16,8 +16,7 @@ export function Insights() {
               className="max-w-[460px] text-4xl leading-[1.2] tracking-[-0.03em] text-[#e9f4f9] md:text-5xl"
               style={{ fontVariationSettings: "'wdth' 100" }}
             >
-              Get yourself up-to-speed on all the things happening in
-              fintech
+              Get yourself up-to-speed on all the things happening in fintech
             </h2>
 
             <Button variant="outline">Insights</Button>
@@ -31,7 +30,6 @@ export function Insights() {
               {/* LEFT IMAGE */}
               <div className="flex items-center justify-center p-6">
                 <div className="relative flex h-[267px] w-[295px] items-center justify-center overflow-hidden rounded-[8px] bg-[#07193c]">
-
                   <div className="relative h-[218.18px] w-[257.198px]">
                     <svg
                       className="absolute inset-0 h-full w-full"
@@ -79,8 +77,7 @@ export function Insights() {
                     className="max-w-[289px] text-[27px] leading-[1.2] text-[#e9f4f9]"
                     style={{ fontVariationSettings: "'wdth' 100" }}
                   >
-                    How to transition from a traditional to a digital
-                    bank
+                    How to transition from a traditional to a digital bank
                   </h3>
 
                   <div className="flex gap-[14px] text-[14px] text-[#64a8c4]">
@@ -110,8 +107,7 @@ export function Insights() {
                       className="max-w-[259px] text-[27px] leading-[1.2] text-[#e9f4f9]"
                       style={{ fontVariationSettings: "'wdth' 100" }}
                     >
-                      How to transition from a traditional to a digital
-                      bank
+                      How to transition from a traditional to a digital bank
                     </h3>
 
                     <div className="flex gap-[14px] text-[14px] text-[#64a8c4]">

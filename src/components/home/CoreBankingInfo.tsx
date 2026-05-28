@@ -1,7 +1,7 @@
-import { Button } from "../ui/Button";
-import { TextLink } from "../ui/TextLink";
-import { imgImage3 } from "../../assets/svgs/svg-mwqa7";
-import imgImage4 from "../../assets/images/cf6d5ba6cd6512a5bf998febcf101b68f11336d4.png";
+import { Button } from '../ui/Button';
+import { TextLink } from '../ui/TextLink';
+import { imgImage3 } from '../../assets/svgs/svg-mwqa7';
+import imgImage4 from '../../assets/images/cf6d5ba6cd6512a5bf998febcf101b68f11336d4.png';
 
 function BankingPreview() {
   return (
@@ -25,10 +25,10 @@ function BankingPreview() {
         style={{
           maskImage: `url('${imgImage3}')`,
           WebkitMaskImage: `url('${imgImage3}')`,
-          maskRepeat: "no-repeat",
-          WebkitMaskRepeat: "no-repeat",
-          maskSize: "cover",
-          WebkitMaskSize: "cover",
+          maskRepeat: 'no-repeat',
+          WebkitMaskRepeat: 'no-repeat',
+          maskSize: 'cover',
+          WebkitMaskSize: 'cover',
         }}
       >
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -118,7 +118,7 @@ export function CoreBankingInfo() {
           opacity-50
         "
         style={{
-          WebkitTextStroke: "2px rgba(0, 90, 130, 0.42)",
+          WebkitTextStroke: '2px rgba(0, 90, 130, 0.42)',
           fontVariationSettings: "'wdth' 100",
         }}
       >
@@ -144,7 +144,6 @@ export function CoreBankingInfo() {
           xl:px-20
         "
       >
-
         <div
           className="
       flex
@@ -156,11 +155,13 @@ export function CoreBankingInfo() {
         >
           <ContentSection />
         </div>
-        <div className="      flex
+        <div
+          className="      flex
       w-full
       justify-center
       xl:w-[45%]
-      xl:justify-end">
+      xl:justify-end"
+        >
           <BankingPreview />
         </div>
       </div>
