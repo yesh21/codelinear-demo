@@ -112,28 +112,66 @@ export function CoreBankingInfo() {
   return (
     <section className="relative w-full overflow-hidden bg-[#000d12]">
       {/* Background Text */}
-      <p
-        className="
-          pointer-events-none
-          absolute
-          font-['Archivo:Medium',sans-serif]
-          left-[-14vw]
-          top-[-2vw]
-          select-none
-          whitespace-nowrap
-          text-[clamp(220px,52vw,572px)]
-          font-medium
-          leading-none
-          text-transparent
-          opacity-50
-        "
-        style={{
-          WebkitTextStroke: '2px rgba(0, 90, 130, 0.42)',
-          fontVariationSettings: "'wdth' 100",
-        }}
-      >
-        CB7
-      </p>
+{/* Background Text */}
+<div
+  className="
+    pointer-events-none
+    absolute
+    left-[-14vw]
+    top-[-2vw]
+    select-none
+  "
+>
+  <div className="relative">
+    <p
+      className="
+        font-['Archivo:Medium',sans-serif]
+        whitespace-nowrap
+        text-[clamp(220px,52vw,572px)]
+        font-medium
+        leading-none
+        text-transparent
+        opacity-50
+      "
+      style={{
+        WebkitTextStroke: '2px rgba(0, 90, 130, 0.42)',
+        fontVariationSettings: "'wdth' 100",
+
+        // Fade toward LEFT-BOTTOM
+        WebkitMaskImage: `
+          linear-gradient(
+            to top right,
+            transparent 0%,
+            rgba(0,0,0,0.15) 12%,
+            rgba(0,0,0,0.7) 28%,
+            black 45%,
+            black 100%
+          )
+        `,
+        maskImage: `
+          linear-gradient(
+            to top right,
+            transparent 0%,
+            rgba(0,0,0,0.15) 12%,
+            rgba(0,0,0,0.7) 28%,
+            black 45%,
+            black 100%
+          )
+        `,
+      }}
+    >
+      CB7
+    </p>
+
+    {/* Extra overlay to fully hide stroke on left-bottom */}
+    <div
+      className="
+        absolute inset-0
+        bg-[radial-gradient(circle_at_bottom_left,rgba(0,13,18,1)_0%,rgba(0,13,18,0.9)_18%,rgba(0,13,18,0.45)_38%,transparent_65%)]
+      "
+    />
+  </div>
+</div>
 
       <div
         className="
